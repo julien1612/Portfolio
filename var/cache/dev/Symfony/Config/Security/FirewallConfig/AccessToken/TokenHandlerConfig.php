@@ -35,7 +35,7 @@ class TokenHandlerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of string|array
      * @param TValue $value
      * @return \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\OidcUserInfoConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\OidcUserInfoConfig : static)
@@ -60,7 +60,7 @@ class TokenHandlerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of mixed
      * @param TValue $value
      * @return \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\OidcConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\OidcConfig : static)

@@ -94,7 +94,7 @@ class MailerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of mixed
      * @param TValue $value
      * @return \Symfony\Config\Framework\Mailer\HeaderConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\Mailer\HeaderConfig : static)
@@ -119,23 +119,12 @@ class MailerConfig
     }
 
     /**
-     * @template TValue
-     * @param TValue $value
      * DKIM signer configuration
      * @default {"enabled":false,"key":"","domain":"","select":"","passphrase":"","options":[]}
-     * @return \Symfony\Config\Framework\Mailer\DkimSignerConfig|$this
-     * @psalm-return (TValue is array ? \Symfony\Config\Framework\Mailer\DkimSignerConfig : static)
-     */
-    public function dkimSigner(array $value = []): \Symfony\Config\Framework\Mailer\DkimSignerConfig|static
+    */
+    public function dkimSigner(array $value = []): \Symfony\Config\Framework\Mailer\DkimSignerConfig
     {
-        if (!\is_array($value)) {
-            $this->_usedProperties['dkimSigner'] = true;
-            $this->dkimSigner = $value;
-
-            return $this;
-        }
-
-        if (!$this->dkimSigner instanceof \Symfony\Config\Framework\Mailer\DkimSignerConfig) {
+        if (null === $this->dkimSigner) {
             $this->_usedProperties['dkimSigner'] = true;
             $this->dkimSigner = new \Symfony\Config\Framework\Mailer\DkimSignerConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -146,23 +135,12 @@ class MailerConfig
     }
 
     /**
-     * @template TValue
-     * @param TValue $value
      * S/MIME signer configuration
      * @default {"enabled":false,"key":"","certificate":"","passphrase":null,"extra_certificates":null,"sign_options":null}
-     * @return \Symfony\Config\Framework\Mailer\SmimeSignerConfig|$this
-     * @psalm-return (TValue is array ? \Symfony\Config\Framework\Mailer\SmimeSignerConfig : static)
-     */
-    public function smimeSigner(array $value = []): \Symfony\Config\Framework\Mailer\SmimeSignerConfig|static
+    */
+    public function smimeSigner(array $value = []): \Symfony\Config\Framework\Mailer\SmimeSignerConfig
     {
-        if (!\is_array($value)) {
-            $this->_usedProperties['smimeSigner'] = true;
-            $this->smimeSigner = $value;
-
-            return $this;
-        }
-
-        if (!$this->smimeSigner instanceof \Symfony\Config\Framework\Mailer\SmimeSignerConfig) {
+        if (null === $this->smimeSigner) {
             $this->_usedProperties['smimeSigner'] = true;
             $this->smimeSigner = new \Symfony\Config\Framework\Mailer\SmimeSignerConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -173,23 +151,12 @@ class MailerConfig
     }
 
     /**
-     * @template TValue
-     * @param TValue $value
      * S/MIME encrypter configuration
      * @default {"enabled":false,"repository":"","cipher":null}
-     * @return \Symfony\Config\Framework\Mailer\SmimeEncrypterConfig|$this
-     * @psalm-return (TValue is array ? \Symfony\Config\Framework\Mailer\SmimeEncrypterConfig : static)
-     */
-    public function smimeEncrypter(array $value = []): \Symfony\Config\Framework\Mailer\SmimeEncrypterConfig|static
+    */
+    public function smimeEncrypter(array $value = []): \Symfony\Config\Framework\Mailer\SmimeEncrypterConfig
     {
-        if (!\is_array($value)) {
-            $this->_usedProperties['smimeEncrypter'] = true;
-            $this->smimeEncrypter = $value;
-
-            return $this;
-        }
-
-        if (!$this->smimeEncrypter instanceof \Symfony\Config\Framework\Mailer\SmimeEncrypterConfig) {
+        if (null === $this->smimeEncrypter) {
             $this->_usedProperties['smimeEncrypter'] = true;
             $this->smimeEncrypter = new \Symfony\Config\Framework\Mailer\SmimeEncrypterConfig($value);
         } elseif (0 < \func_num_args()) {

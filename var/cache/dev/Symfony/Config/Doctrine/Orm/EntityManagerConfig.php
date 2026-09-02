@@ -46,7 +46,7 @@ class EntityManagerConfig
     private $_usedProperties = [];
 
     /**
-     * @template TValue
+     * @template TValue of string|array
      * @param TValue $value
      * @default {"type":null}
      * @return \Symfony\Config\Doctrine\Orm\EntityManagerConfig\QueryCacheDriverConfig|$this
@@ -72,7 +72,7 @@ class EntityManagerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of string|array
      * @param TValue $value
      * @return \Symfony\Config\Doctrine\Orm\EntityManagerConfig\MetadataCacheDriverConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Doctrine\Orm\EntityManagerConfig\MetadataCacheDriverConfig : static)
@@ -97,7 +97,7 @@ class EntityManagerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of string|array
      * @param TValue $value
      * @default {"type":null}
      * @return \Symfony\Config\Doctrine\Orm\EntityManagerConfig\ResultCacheDriverConfig|$this
@@ -123,7 +123,7 @@ class EntityManagerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of mixed
      * @param TValue $value
      * @return \Symfony\Config\Doctrine\Orm\EntityManagerConfig\EntityListenersConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Doctrine\Orm\EntityManagerConfig\EntityListenersConfig : static)
@@ -356,7 +356,7 @@ class EntityManagerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of string|array
      * @param TValue $value
      * @return \Symfony\Config\Doctrine\Orm\EntityManagerConfig\MappingConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Doctrine\Orm\EntityManagerConfig\MappingConfig : static)
@@ -393,7 +393,7 @@ class EntityManagerConfig
     }
 
     /**
-     * @template TValue
+     * @template TValue of mixed
      * @param TValue $value
      * Register SQL Filters in the entity manager
      * @return \Symfony\Config\Doctrine\Orm\EntityManagerConfig\FilterConfig|$this

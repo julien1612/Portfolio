@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark color-nav shadow-sm">
+	<div class="container-fluid">
+		<a class="navbar-brand d-flex align-items-center" href={#{{ path('app_home') }}#}>
+			<img src="{#{{ asset('pictures/logo.webp') }}#}" alt="Logo" class="logo-header">
+			<h1 class="titleH1 mb-0 ms-3 fs-4 fs-lg-2 display-lg-6">Le Bonheur des Petits Guerriers</h1>
+		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLBPG">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarLBPG">
+			<ul class="navbar-nav ms-auto text-center gap-2 mt-3 mt-lg-0">
+				<li class="nav-item">
+					<a class="nav-link color-link {#{{ app.request.get('_route') == 'app_home' ? 'active' : '' }}" href="{{ path('app_home') }}#}">L'association</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link color-link {#{{ app.request.get('_route') == 'app_article' ? 'active' : '' }}" href="{{ path('app_article') }}#}">Actualités</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link color-link {#{{ app.request.get('_route') == 'app_contact' ? 'active' : '' }}" href="{{ path('app_contact') }}#}">Contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link color-link {#{{ app.request.get('_route') == 'app_soutenir' ? 'active' : '' }}" href="{{ path('app_soutenir') }}#}">Nous soutenir</a>
+				</li>
+				<li class="nav-item d-flex align-items-center">
+					<a class="nav-link nav-btn-soutenir px-4 ms-lg-3" href="https://www.helloasso.com/associations/le-bonheur-des-petits-guerriers">
+						Faire un don
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

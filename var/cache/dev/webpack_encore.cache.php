@@ -13,7 +13,7 @@ return [[
         'app' => [
             'js' => [
                 '/build/runtime.js',
-                '/build/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_bootstrap_dist_js_bootst-6f4bc8.js',
+                '/build/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_bootstrap_dist_js_bootst-e54055.js',
                 '/build/app.js',
             ],
             'css' => [

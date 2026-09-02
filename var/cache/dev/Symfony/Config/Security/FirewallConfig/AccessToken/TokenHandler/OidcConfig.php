@@ -140,22 +140,11 @@ class OidcConfig
     }
 
     /**
-     * @template TValue
-     * @param TValue $value
      * @default {"enabled":false,"enforce":false,"algorithms":[]}
-     * @return \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\Oidc\EncryptionConfig|$this
-     * @psalm-return (TValue is array ? \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\Oidc\EncryptionConfig : static)
-     */
-    public function encryption(array $value = []): \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\Oidc\EncryptionConfig|static
+    */
+    public function encryption(array $value = []): \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\Oidc\EncryptionConfig
     {
-        if (!\is_array($value)) {
-            $this->_usedProperties['encryption'] = true;
-            $this->encryption = $value;
-
-            return $this;
-        }
-
-        if (!$this->encryption instanceof \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\Oidc\EncryptionConfig) {
+        if (null === $this->encryption) {
             $this->_usedProperties['encryption'] = true;
             $this->encryption = new \Symfony\Config\Security\FirewallConfig\AccessToken\TokenHandler\Oidc\EncryptionConfig($value);
         } elseif (0 < \func_num_args()) {
