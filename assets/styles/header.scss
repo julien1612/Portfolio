@@ -1,31 +1,42 @@
 .color-nav {
-    background: #000000;
-    background: linear-gradient(to right, #434343, #000000);
-    color: beige !important;
-    padding: 10px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../public/pictures/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: beige !important;
+  padding: 15px 0;
 }
 
 .logo-header {
-    width: 50px; 
-    height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%; 
+  overflow: hidden;
+  border: 3px solid beige;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  
+  
+  width: 100px;
+  height: 100px;
 
-    @media (min-width: 768px) {
-        width: 65px; 
-    }
+  @media (min-width: 768px) {
+    width: 130px;
+    height: 130px;
+  }
 
-    @media (min-width: 1200px) {
-        width: 80px; 
-    }
+  @media (min-width: 1200px) {
+    width: 160px;
+    height: 160px;
+  }
 }
-
 .titleH1 {
-    color: beige !important;
-    font-family: "Delius", cursive;
+    color: beige!important;
+    font-family: "poppins", sans-serif;
     font-weight: 700;
     
     font-size: 1.5rem !important;
     white-space: normal; 
     line-height: 1.2;
+    text-align: center;
 
     @media (max-width: 576px) {
         font-size: 1.1rem !important;
@@ -40,7 +51,7 @@
 
 .color-link {
     color: beige !important;
-    font-size: 1rem; 
+    font-size: 1.5rem !important; 
     transition: all 0.3s ease;
 
     @media (min-width: 1200px) {
@@ -49,13 +60,13 @@
 
     &:hover,
     &.active {
-        color: #ffcc00 !important;
+        color: beige !important;
         text-decoration: underline;
     }
 }
 
 .nav-btn-soutenir {
-    background-color: #ffcc00 !important;
+    background-color: beige !important;
     color: rgb(48, 48, 46) !important;
     border-radius: 50px;
     font-weight: bold;
@@ -63,11 +74,12 @@
     transition: all 0.3s ease;
     border: 2px solid transparent;
     text-align: center;
+    
 
     &:hover {
         background-color: transparent !important;
-        color: #ffcc00 !important;
-        border-color: #ffcc00;
+        color: bisque !important;
+        border-color: bisque !important;
         text-decoration: none !important;
         transform: translateY(-2px);
     }
