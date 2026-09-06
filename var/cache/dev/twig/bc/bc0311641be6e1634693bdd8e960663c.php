@@ -46,16 +46,14 @@ class __TwigTemplate_e76c1009fb739159f452110cbbc62d3e extends Template
 
         // line 1
         yield "<nav class=\"navbar navbar-expand-lg navbar-dark color-nav shadow-sm\">
-    <!-- Remplace container-fluid par container pour créer des marges propres à gauche et à droite -->
     <div class=\"container d-flex align-items-center justify-content-between px-3\">
 
-        <!-- BLOC 1 : Photo + Nom -->
         <a class=\"navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none\" href=\"";
-        // line 6
+        // line 4
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         yield "\">
             <img src=\"";
-        // line 7
+        // line 5
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/photo_moi.PNG"), "html", null, true);
         yield "\" alt=\"Julien Chassin\" class=\"logo-header\">
             <div class=\"ms-2 ms-sm-3 text-start\">
@@ -64,32 +62,30 @@ class __TwigTemplate_e76c1009fb739159f452110cbbc62d3e extends Template
             </div>
         </a>
 
-        <!-- BLOC 2 : Bouton Burger -->
-        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarLBPG\" aria-controls=\"navbarLBPG\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarport\" aria-controls=\"navbarport\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
         </button>
 
-        <!-- BLOC 3 : Menu déroulant -->
-        <div class=\"collapse navbar-collapse\" id=\"navbarLBPG\">
+        <div class=\"collapse navbar-collapse\" id=\"navbarport\">
             <ul class=\"navbar-nav ms-auto text-center gap-2 mt-3 mt-lg-0\">
                 <li class=\"nav-item\">
                     <a class=\"nav-link color-link";
-        // line 23
+        // line 19
         yield "\">À propos</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link color-link";
-        // line 26
+        // line 22
         yield "\">Projets</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link color-link";
-        // line 29
+        // line 25
         yield "\">Compétences</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link color-link";
-        // line 32
+        // line 28
         yield "\">Contact</a>
                 </li>
             </ul>
@@ -127,16 +123,14 @@ class __TwigTemplate_e76c1009fb739159f452110cbbc62d3e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  93 => 32,  88 => 29,  83 => 26,  78 => 23,  59 => 7,  55 => 6,  48 => 1,);
+        return array (  89 => 28,  84 => 25,  79 => 22,  74 => 19,  57 => 5,  53 => 4,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("<nav class=\"navbar navbar-expand-lg navbar-dark color-nav shadow-sm\">
-    <!-- Remplace container-fluid par container pour créer des marges propres à gauche et à droite -->
     <div class=\"container d-flex align-items-center justify-content-between px-3\">
 
-        <!-- BLOC 1 : Photo + Nom -->
         <a class=\"navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none\" href=\"{{ path('app_home') }}\">
             <img src=\"{{ asset('pictures/photo_moi.PNG') }}\" alt=\"Julien Chassin\" class=\"logo-header\">
             <div class=\"ms-2 ms-sm-3 text-start\">
@@ -145,13 +139,11 @@ class __TwigTemplate_e76c1009fb739159f452110cbbc62d3e extends Template
             </div>
         </a>
 
-        <!-- BLOC 2 : Bouton Burger -->
-        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarLBPG\" aria-controls=\"navbarLBPG\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarport\" aria-controls=\"navbarport\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span>
         </button>
 
-        <!-- BLOC 3 : Menu déroulant -->
-        <div class=\"collapse navbar-collapse\" id=\"navbarLBPG\">
+        <div class=\"collapse navbar-collapse\" id=\"navbarport\">
             <ul class=\"navbar-nav ms-auto text-center gap-2 mt-3 mt-lg-0\">
                 <li class=\"nav-item\">
                     <a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#}\">À propos</a>
