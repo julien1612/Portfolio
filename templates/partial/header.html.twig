@@ -1,33 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-dark color-nav shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between px-3">
 
-	<div class="container-fluid ">
-		<img src="{{ asset('pictures/photo_moi.PNG') }}" alt="Julien Chassin" class="logo-header ms-3 ">
-		<h1 class="titleH1 mb-0 ms-3 ms-lg-5 fs-4 fs-lg-2 display-lg-6">CHASSIN Julien<br>Développeur Full Stack</h1>
+        <a class="navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none" href="{{ path('app_home') }}">
+            <img src="{{ asset('pictures/photo_moi.PNG') }}" alt="Julien Chassin" class="logo-header">
+            <div class="ms-2 ms-sm-3 text-start">
+                <h1 class="titleH1 mb-0">CHASSIN Julien</h1>
+                <span class="subtitle-header d-block">Développeur Full Stack</span>
+            </div>
+        </a>
 
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLBPG">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLBPG" aria-controls="navbarLBPG" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-		<div class="collapse navbar-collapse" id="navbarLBPG">
-			<ul class="navbar-nav ms-auto text-center gap-2 mt-3 mt-lg-0">
-				<li class="nav-item">
-					<a class="nav-link color-link {#{{ app.request.get('_route') == 'app_home' ? 'active' : '' }}" href="{{ path('app_home') }}#}">À propos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link color-link {#{{ app.request.get('_route') == 'app_article' ? 'active' : '' }}" href="{{ path('app_article') }}#}">Projets</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link color-link {#{{ app.request.get('_route') == 'app_contact' ? 'active' : '' }}" href="{{ path('app_contact') }}#}">Compétences</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link color-link me-3" {#{{ app.request.get('_route') == 'app_soutenir' ? 'active' : '' }}" href="{{ path('app_soutenir') }}#}">Contact</a>
-				</li>
-				{#<li class="nav-item d-flex align-items-center">
-					<a class="nav-link nav-btn-soutenir px-4 ms-lg-3" href="https://www.helloasso.com/associations/le-bonheur-des-petits-guerriers">
-						Mon CV
-					</a>
-				</li>#}
-			</ul>
-		</div>
-	</div>
+        <div class="collapse navbar-collapse" id="navbarLBPG">
+            <ul class="navbar-nav ms-auto text-center gap-2 mt-3 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link color-link{#" href="{{ path('app_home') }}#}">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-link{#" href="{{ path('app_home') }}#projets"#}">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-link{#" href="{{ path('app_home') }}#competences"#}">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-link{#" href="{{ path('app_home') }}#contact"#}">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 </nav>

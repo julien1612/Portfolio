@@ -3,7 +3,11 @@
   background-size: cover;
   background-position: center;
   color: beige !important;
-  padding: 15px 0;
+  padding: 12px 0; 
+
+  @media (min-width: 768px) {
+    padding: 18px 0;
+  }
 }
 
 .logo-header {
@@ -11,35 +15,43 @@
   object-fit: cover;
   object-position: center 30%; 
   overflow: hidden;
-  border: 3px solid beige;
+  border: 2px solid beige;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   
-  
-  width: 100px;
-  height: 100px;
+  width: 55px;
+  height: 55px;
+
+  @media (min-width: 576px) {
+    width: 75px;
+    height: 75px;
+  }
 
   @media (min-width: 768px) {
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
+    border-width: 3px;
   }
 
   @media (min-width: 1200px) {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
   }
 }
+
 .titleH1 {
-    color: beige!important;
+    color: beige !important;
     font-family: "poppins", sans-serif;
     font-weight: 700;
-    
-    font-size: 1.5rem !important;
-    white-space: normal; 
     line-height: 1.2;
-    text-align: center;
+    text-align: left !important; 
+    font-size: 0.95rem !important; 
 
-    @media (max-width: 576px) {
-        font-size: 1.1rem !important;
+    @media (min-width: 576px) {
+        font-size: 1.2rem !important;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 1.6rem !important;
     }
 
     @media (min-width: 1200px) {
@@ -49,48 +61,45 @@
     }
 }
 
+.subtitle-header {
+    color: beige !important;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    text-align: left !important; 
+    font-size: 0.75rem !important;
+
+    @media (min-width: 768px) {
+        font-size: 0.95rem !important;
+    }
+}
+
 .color-link {
     color: beige !important;
-    font-size: 1.5rem !important; 
+    font-size: 1.1rem !important;
     transition: all 0.3s ease;
 
     @media (min-width: 1200px) {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
     }
 
     &:hover,
     &.active {
-        color: beige !important;
+        color: #fff !important;
         text-decoration: underline;
     }
 }
 
-.nav-btn-soutenir {
-    background-color: beige !important;
-    color: rgb(48, 48, 46) !important;
-    border-radius: 50px;
-    font-weight: bold;
-    padding: 8px 20px !important; 
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    text-align: center;
-    
-
-    &:hover {
-        background-color: transparent !important;
-        color: bisque !important;
-        border-color: bisque !important;
-        text-decoration: none !important;
-        transform: translateY(-2px);
-    }
-
-    @media (max-width: 991px) {
-        margin-top: 15px;
-        display: block; 
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(10, 25, 47, 0.75); 
+    backdrop-filter: blur(8px);          
+    -webkit-backdrop-filter: blur(8px);  
+    border: 1px solid rgba(245, 245, 220, 0.15); 
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .navbar-nav {
