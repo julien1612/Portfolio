@@ -73,6 +73,7 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
+        yield "Accueil - Développeur Full Stack";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -96,9 +97,103 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Test mon site</h1>
-    <button type=\"button\" class=\"btn btn-danger\">Danger</button>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eius explicabo fugiat praesentium, provident quia quos tempore ullam! Adipisci commodi cupiditate dicta dolore doloribus fuga non obcaecati sit. Temporibus, voluptas!</p>
+        yield "
+<div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade custom-hero-carousel\" data-bs-ride=\"carousel\">
+    <div class=\"carousel-inner\">
+
+        <!-- SLIDE 1 -->
+        <div class=\"carousel-item active\">
+            <div class=\"carousel-overlay\"></div>
+            <img src=\"";
+        // line 13
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/img_1.jpg"), "html", null, true);
+        yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 1\">
+            <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <h2 class=\"fw-bold text-uppercase\">Web Design</h2>
+                <p>Conception graphique & interfaces modernes</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class=\"carousel-item\">
+            <div class=\"carousel-overlay\"></div>
+            <img src=\"";
+        // line 23
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/img_4.jpg"), "html", null, true);
+        yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 2\">
+            <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <h2 class=\"fw-bold text-uppercase\">Développement Full Stack</h2>
+                <p>Création d'applications web performantes avec Symfony & React</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class=\"carousel-item\">
+            <div class=\"carousel-overlay\"></div>
+            <img src=\"";
+        // line 33
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/img_3.jpg"), "html", null, true);
+        yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 3\">
+            <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <h2 class=\"fw-bold text-uppercase\">Solutions Sur Mesure</h2>
+                <p>Logos, sites vitrines, e-commerce et applications métier</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOUTONS PREV / NEXT -->
+    <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"prev\">
+        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+        <span class=\"visually-hidden\">Précédent</span>
+    </button>
+    <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"next\">
+        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+        <span class=\"visually-hidden\">Suivant</span>
+    </button>
+</div>
+
+<section id=\"services\" class=\"py-5\">
+    <div class=\"container\">
+        <h2 class=\"text-center mb-5 \" data-aos=\"fade-up\">Mes Services</h2>
+        
+        <div class=\"row g-4\">
+            <!-- CARTE 1 -->
+            <div class=\"col-md-4\" data-aos=\"fade-up\" data-aos-delay=\"100\">
+                <div class=\"card custom-card h-100 p-4\">
+                    <div class=\"card-body text-center\">
+                        <i class=\"bi bi-laptop display-4 text-primary mb-3\"></i>
+                        <h3 class=\"card-title h4\">Web Design</h3>
+                        <p class=\"card-text\">Design moderne, responsive et adapté à votre image de marque.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARTE 2 -->
+            <div class=\"col-md-4\" data-aos=\"fade-up\" data-aos-delay=\"200\">
+                <div class=\"card custom-card h-100 p-4\">
+                    <div class=\"card-body text-center\">
+                        <i class=\"bi bi-code-slash display-4 text-primary mb-3\"></i>
+                        <h3 class=\"card-title h4\">Développement Full Stack</h3>
+                        <p class=\"card-text\">Applications web robustes et évolutives avec Symfony & React.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARTE 3 -->
+            <div class=\"col-md-4\" data-aos=\"fade-up\" data-aos-delay=\"300\">
+                <div class=\"card custom-card h-100 p-4\">
+                    <div class=\"card-body text-center\">
+                        <i class=\"bi bi-gear-wide-connected display-4 text-primary mb-3\"></i>
+                        <h3 class=\"card-title h4\">Sur Mesure</h3>
+                        <p class=\"card-text\">E-commerce, API REST et fonctionnalités métiers personnalisées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -130,20 +225,104 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  99 => 6,  86 => 5,  64 => 3,  41 => 1,);
+        return array (  135 => 33,  122 => 23,  109 => 13,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Accueil - Développeur Full Stack{% endblock %}
 
 {% block body %}
-    <h1>Test mon site</h1>
-    <button type=\"button\" class=\"btn btn-danger\">Danger</button>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eius explicabo fugiat praesentium, provident quia quos tempore ullam! Adipisci commodi cupiditate dicta dolore doloribus fuga non obcaecati sit. Temporibus, voluptas!</p>
-{% endblock %}
-", "home/index.html.twig", "/Users/julienchassin/Documents/Portfolio/templates/home/index.html.twig");
+
+<div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade custom-hero-carousel\" data-bs-ride=\"carousel\">
+    <div class=\"carousel-inner\">
+
+        <!-- SLIDE 1 -->
+        <div class=\"carousel-item active\">
+            <div class=\"carousel-overlay\"></div>
+            <img src=\"{{ asset('pictures/img_1.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 1\">
+            <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <h2 class=\"fw-bold text-uppercase\">Web Design</h2>
+                <p>Conception graphique & interfaces modernes</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class=\"carousel-item\">
+            <div class=\"carousel-overlay\"></div>
+            <img src=\"{{ asset('pictures/img_4.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 2\">
+            <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <h2 class=\"fw-bold text-uppercase\">Développement Full Stack</h2>
+                <p>Création d'applications web performantes avec Symfony & React</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class=\"carousel-item\">
+            <div class=\"carousel-overlay\"></div>
+            <img src=\"{{ asset('pictures/img_3.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 3\">
+            <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <h2 class=\"fw-bold text-uppercase\">Solutions Sur Mesure</h2>
+                <p>Logos, sites vitrines, e-commerce et applications métier</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOUTONS PREV / NEXT -->
+    <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"prev\">
+        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+        <span class=\"visually-hidden\">Précédent</span>
+    </button>
+    <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"next\">
+        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+        <span class=\"visually-hidden\">Suivant</span>
+    </button>
+</div>
+
+<section id=\"services\" class=\"py-5\">
+    <div class=\"container\">
+        <h2 class=\"text-center mb-5 \" data-aos=\"fade-up\">Mes Services</h2>
+        
+        <div class=\"row g-4\">
+            <!-- CARTE 1 -->
+            <div class=\"col-md-4\" data-aos=\"fade-up\" data-aos-delay=\"100\">
+                <div class=\"card custom-card h-100 p-4\">
+                    <div class=\"card-body text-center\">
+                        <i class=\"bi bi-laptop display-4 text-primary mb-3\"></i>
+                        <h3 class=\"card-title h4\">Web Design</h3>
+                        <p class=\"card-text\">Design moderne, responsive et adapté à votre image de marque.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARTE 2 -->
+            <div class=\"col-md-4\" data-aos=\"fade-up\" data-aos-delay=\"200\">
+                <div class=\"card custom-card h-100 p-4\">
+                    <div class=\"card-body text-center\">
+                        <i class=\"bi bi-code-slash display-4 text-primary mb-3\"></i>
+                        <h3 class=\"card-title h4\">Développement Full Stack</h3>
+                        <p class=\"card-text\">Applications web robustes et évolutives avec Symfony & React.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARTE 3 -->
+            <div class=\"col-md-4\" data-aos=\"fade-up\" data-aos-delay=\"300\">
+                <div class=\"card custom-card h-100 p-4\">
+                    <div class=\"card-body text-center\">
+                        <i class=\"bi bi-gear-wide-connected display-4 text-primary mb-3\"></i>
+                        <h3 class=\"card-title h4\">Sur Mesure</h3>
+                        <p class=\"card-text\">E-commerce, API REST et fonctionnalités métiers personnalisées.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}", "home/index.html.twig", "/Users/julienchassin/Documents/Portfolio/templates/home/index.html.twig");
     }
 }

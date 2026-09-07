@@ -1,0 +1,109 @@
+.custom-hero-carousel {
+  height: 100vh;
+  height: 100svh; // Hauteur dynamique pour navigateurs mobiles
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .carousel-inner,
+  .carousel-item {
+    height: 100%;
+  }
+
+  .hero-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // Calque sombre par-dessus l'image
+  .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  // Style des textes
+  .carousel-caption {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    // Décalage vers le bas sur mobile sous le header flottant
+    padding-top: 32vh !important;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 768px) {
+      padding-top: 0 !important; // Reset du padding sur tablette/desktop
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      letter-spacing: 1px;
+      font-size: 1.65rem;
+
+      @media (min-width: 576px) {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: calc(1.8rem + 1.5vw);
+      }
+    }
+
+    p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      line-height: 1.35;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      max-width: 90%;
+      margin: 0.5rem auto 0 auto;
+
+      @media (min-width: 768px) {
+        font-size: calc(1rem + 0.5vw);
+        max-width: 800px;
+      }
+    }
+  }
+
+  // Flèches de navigation
+  .carousel-control-prev,
+  .carousel-control-next {
+    z-index: 3;
+    width: 10%;
+
+    @media (min-width: 768px) {
+      width: 5%;
+    }
+  }
+}
+
+
+.custom-card {
+  background: rgba(255, 255, 255, 0.511); // Adapté pour fond sombre, ou rgba(255, 255, 255, 0.8) pour fond clair
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.494);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Transition élastique fluide
+
+  &:hover {
+    transform: translateY(-10px) scale(1.02); // La carte monte et grossit subtilement
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    border-color: rgba(96, 165, 250, 0.5); // Bordure lumineuse au survol
+  }
+}
+
+.text-center {
+    color: #ffffff !important;
+}

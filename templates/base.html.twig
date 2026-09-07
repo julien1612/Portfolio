@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<title>
 			{% block title %}Welcome!
 			{% endblock %}
@@ -25,5 +26,13 @@
 		{% endblock %}
 
 		{% block body %}{% endblock %}
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,  // Durée de l'animation (en ms)
+    once: true,     // L'animation ne se joue qu'une seule fois au scroll
+    offset: 120     // Déclenche l'animation un peu avant que l'élément soit au centre
+  });
+</script>
 	</body>
 </html>

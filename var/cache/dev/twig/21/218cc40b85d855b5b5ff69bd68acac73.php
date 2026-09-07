@@ -54,11 +54,12 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
 <html>
 \t<head>
 \t\t<meta charset=\"UTF-8\">
+\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/aos@next/dist/aos.css\" />
 \t\t<title>
 \t\t\t";
-        // line 6
+        // line 7
         yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
-        // line 8
+        // line 9
         yield "\t\t</title>
 \t\t<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
 \t\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
@@ -66,26 +67,34 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
 
 
 \t\t";
-        // line 14
+        // line 15
         yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
-        // line 17
+        // line 18
         yield "
 \t\t";
-        // line 18
+        // line 19
         yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
-        // line 21
+        // line 22
         yield "\t</head>
 \t<body>
 \t\t";
-        // line 23
+        // line 24
         yield from $this->unwrap()->yieldBlock('header', $context, $blocks);
-        // line 26
+        // line 27
         yield "
 \t\t";
-        // line 27
-        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
         // line 28
-        yield "\t</body>
+        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
+        // line 29
+        yield "\t\t<script src=\"https://unpkg.com/aos@next/dist/aos.js\"></script>
+<script>
+  AOS.init({
+    duration: 800,  // Durée de l'animation (en ms)
+    once: true,     // L'animation ne se joue qu'une seule fois au scroll
+    offset: 120     // Déclenche l'animation un peu avant que l'élément soit au centre
+  });
+</script>
+\t</body>
 </html>
 ";
         
@@ -97,7 +106,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         yield from [];
     }
 
-    // line 6
+    // line 7
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -121,7 +130,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         yield from [];
     }
 
-    // line 14
+    // line 15
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -134,7 +143,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 15
+        // line 16
         yield "\t\t\t";
         yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         yield "
@@ -148,7 +157,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         yield from [];
     }
 
-    // line 18
+    // line 19
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -161,7 +170,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 19
+        // line 20
         yield "\t\t\t";
         yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
         yield "
@@ -175,7 +184,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         yield from [];
     }
 
-    // line 23
+    // line 24
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -188,10 +197,10 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 24
-        yield "\t\t\t";
-        yield from $this->load("partial/header.html.twig", 24)->unwrap()->yield($context);
         // line 25
+        yield "\t\t\t";
+        yield from $this->load("partial/header.html.twig", 25)->unwrap()->yield($context);
+        // line 26
         yield "\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -202,7 +211,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
         yield from [];
     }
 
-    // line 27
+    // line 28
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -237,7 +246,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  206 => 27,  195 => 25,  192 => 24,  179 => 23,  165 => 19,  152 => 18,  138 => 15,  125 => 14,  101 => 6,  88 => 28,  86 => 27,  83 => 26,  81 => 23,  77 => 21,  75 => 18,  72 => 17,  70 => 14,  62 => 8,  60 => 6,  53 => 1,);
+        return array (  215 => 28,  204 => 26,  201 => 25,  188 => 24,  174 => 20,  161 => 19,  147 => 16,  134 => 15,  110 => 7,  89 => 29,  87 => 28,  84 => 27,  82 => 24,  78 => 22,  76 => 19,  73 => 18,  71 => 15,  63 => 9,  61 => 7,  53 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -246,6 +255,7 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
 <html>
 \t<head>
 \t\t<meta charset=\"UTF-8\">
+\t\t<link rel=\"stylesheet\" href=\"https://unpkg.com/aos@next/dist/aos.css\" />
 \t\t<title>
 \t\t\t{% block title %}Welcome!
 \t\t\t{% endblock %}
@@ -269,6 +279,14 @@ class __TwigTemplate_c3530a3eda24ced6e026b352ac97d405 extends Template
 \t\t{% endblock %}
 
 \t\t{% block body %}{% endblock %}
+\t\t<script src=\"https://unpkg.com/aos@next/dist/aos.js\"></script>
+<script>
+  AOS.init({
+    duration: 800,  // Durée de l'animation (en ms)
+    once: true,     // L'animation ne se joue qu'une seule fois au scroll
+    offset: 120     // Déclenche l'animation un peu avant que l'élément soit au centre
+  });
+</script>
 \t</body>
 </html>
 ", "base.html.twig", "/Users/julienchassin/Documents/Portfolio/templates/base.html.twig");
