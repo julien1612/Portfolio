@@ -529,3 +529,14 @@ b9209c,127.0.0.1,GET,https://127.0.0.1:8000/,1788812985,,200,request
 b02fc2,127.0.0.1,GET,https://127.0.0.1:8000/,1788813049,,200,request
 e87a0d,127.0.0.1,GET,https://127.0.0.1:8000/,1788813096,,200,request
 6e7b4a,127.0.0.1,GET,https://127.0.0.1:8000/,1788813207,,200,request
+442f6a,127.0.0.1,GET,https://127.0.0.1:8000/,1788813415,,200,request
+05ac64,127.0.0.1,GET,https://127.0.0.1:8000/,1788813693,,200,request
+d498a7,127.0.0.1,GET,https://127.0.0.1:8000/,1788813780,,200,request
+3bd472,127.0.0.1,GET,https://127.0.0.1:8000/,1788813922,,200,request
+806e13,127.0.0.1,GET,https://127.0.0.1:8000/,1788814122,,200,request
+6a7ed2,127.0.0.1,GET,https://127.0.0.1:8000/,1788814298,,200,request
+df0ecc,127.0.0.1,GET,https://127.0.0.1:8000/,1788814301,,200,request
+ea8463,127.0.0.1,GET,https://127.0.0.1:8000/,1788814457,,200,request
+380d8f,127.0.0.1,GET,https://127.0.0.1:8000/,1788814461,,200,request
+2fa33f,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1788814703,5ae6e8,404,request
+5ae6e8,127.0.0.1,GET,https://127.0.0.1:8000/.well-known/appspecific/com.chrome.devtools.json,1788814703,,404,request

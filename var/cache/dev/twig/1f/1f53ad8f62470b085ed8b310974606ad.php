@@ -142,6 +142,13 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
 
     </div>
 
+    <!-- VAGUE DE TRANSITION -->
+    <div class=\"custom-shape-divider-bottom\">
+        <svg data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 120\" preserveAspectRatio=\"none\">
+            <path d=\"M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.92,126.31,121.72,188,111.92,233.15,104.7,276.81,81.42,321.39,56.44Z\" fill=\"#0f172a\"></path>
+        </svg>
+    </div>
+
     <!-- BOUTONS PREV / NEXT -->
     <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"prev\">
         <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
@@ -153,9 +160,10 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
     </button>
 </div>
 
+<!-- SECTION SERVICES -->
 <section id=\"services\" class=\"py-5\">
-    <div class=\"container\">
-        <h2 class=\"text-center mb-5 \" data-aos=\"fade-up\">Mes Services</h2>
+    <div class=\"container py-4\">
+        <h2 class=\"text-center mb-5 fw-bold text-white\" data-aos=\"fade-up\">Mes Services</h2>
         
         <div class=\"row g-4\">
             <!-- CARTE 1 -->
@@ -163,8 +171,8 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
                 <div class=\"card custom-card h-100 p-4\">
                     <div class=\"card-body text-center\">
                         <i class=\"bi bi-laptop display-4 text-primary mb-3\"></i>
-                        <h3 class=\"card-title h4\">Web Design</h3>
-                        <p class=\"card-text\">Design moderne, responsive et adapté à votre image de marque.</p>
+                        <h3 class=\"card-title h4 text-white\">Web Design</h3>
+                        <p class=\"card-text text-light\">Design moderne, responsive et adapté à votre image de marque.</p>
                     </div>
                 </div>
             </div>
@@ -174,8 +182,8 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
                 <div class=\"card custom-card h-100 p-4\">
                     <div class=\"card-body text-center\">
                         <i class=\"bi bi-code-slash display-4 text-primary mb-3\"></i>
-                        <h3 class=\"card-title h4\">Développement Full Stack</h3>
-                        <p class=\"card-text\">Applications web robustes et évolutives avec Symfony & React.</p>
+                        <h3 class=\"card-title h4 text-white\">Développement Full Stack</h3>
+                        <p class=\"card-text text-light\">Applications web robustes et évolutives avec Symfony & React.</p>
                     </div>
                 </div>
             </div>
@@ -185,8 +193,8 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
                 <div class=\"card custom-card h-100 p-4\">
                     <div class=\"card-body text-center\">
                         <i class=\"bi bi-gear-wide-connected display-4 text-primary mb-3\"></i>
-                        <h3 class=\"card-title h4\">Sur Mesure</h3>
-                        <p class=\"card-text\">E-commerce, API REST et fonctionnalités métiers personnalisées.</p>
+                        <h3 class=\"card-title h4 text-white\">Sur Mesure</h3>
+                        <p class=\"card-text text-light\">E-commerce, API REST et fonctionnalités métiers personnalisées.</p>
                     </div>
                 </div>
             </div>
@@ -271,6 +279,13 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
 
     </div>
 
+    <!-- VAGUE DE TRANSITION -->
+    <div class=\"custom-shape-divider-bottom\">
+        <svg data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 120\" preserveAspectRatio=\"none\">
+            <path d=\"M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.92,126.31,121.72,188,111.92,233.15,104.7,276.81,81.42,321.39,56.44Z\" fill=\"#0f172a\"></path>
+        </svg>
+    </div>
+
     <!-- BOUTONS PREV / NEXT -->
     <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleFade\" data-bs-slide=\"prev\">
         <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
@@ -282,9 +297,10 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
     </button>
 </div>
 
+<!-- SECTION SERVICES -->
 <section id=\"services\" class=\"py-5\">
-    <div class=\"container\">
-        <h2 class=\"text-center mb-5 \" data-aos=\"fade-up\">Mes Services</h2>
+    <div class=\"container py-4\">
+        <h2 class=\"text-center mb-5 fw-bold text-white\" data-aos=\"fade-up\">Mes Services</h2>
         
         <div class=\"row g-4\">
             <!-- CARTE 1 -->
@@ -292,8 +308,8 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
                 <div class=\"card custom-card h-100 p-4\">
                     <div class=\"card-body text-center\">
                         <i class=\"bi bi-laptop display-4 text-primary mb-3\"></i>
-                        <h3 class=\"card-title h4\">Web Design</h3>
-                        <p class=\"card-text\">Design moderne, responsive et adapté à votre image de marque.</p>
+                        <h3 class=\"card-title h4 text-white\">Web Design</h3>
+                        <p class=\"card-text text-light\">Design moderne, responsive et adapté à votre image de marque.</p>
                     </div>
                 </div>
             </div>
@@ -303,8 +319,8 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
                 <div class=\"card custom-card h-100 p-4\">
                     <div class=\"card-body text-center\">
                         <i class=\"bi bi-code-slash display-4 text-primary mb-3\"></i>
-                        <h3 class=\"card-title h4\">Développement Full Stack</h3>
-                        <p class=\"card-text\">Applications web robustes et évolutives avec Symfony & React.</p>
+                        <h3 class=\"card-title h4 text-white\">Développement Full Stack</h3>
+                        <p class=\"card-text text-light\">Applications web robustes et évolutives avec Symfony & React.</p>
                     </div>
                 </div>
             </div>
@@ -314,8 +330,8 @@ class __TwigTemplate_042b379bff203a08f899b294242b64a6 extends Template
                 <div class=\"card custom-card h-100 p-4\">
                     <div class=\"card-body text-center\">
                         <i class=\"bi bi-gear-wide-connected display-4 text-primary mb-3\"></i>
-                        <h3 class=\"card-title h4\">Sur Mesure</h3>
-                        <p class=\"card-text\">E-commerce, API REST et fonctionnalités métiers personnalisées.</p>
+                        <h3 class=\"card-title h4 text-white\">Sur Mesure</h3>
+                        <p class=\"card-text text-light\">E-commerce, API REST et fonctionnalités métiers personnalisées.</p>
                     </div>
                 </div>
             </div>
