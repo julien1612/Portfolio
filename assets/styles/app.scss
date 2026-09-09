@@ -4,23 +4,55 @@
 
 @import "body";
 
-.delius-regular, h1, p {
-    font-family: "poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.delius-regular,
+h1,
+p {
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
-body {
-  min-height: 100vh;
-  background: #0f172a; // Dark slate
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.15) 0%, transparent 40%);
-  background-attachment: fixed;
+#about,
+#services {
+  background-color: #0b132b;
+  position: relative;
+  overflow: hidden;
+
+  // Trame de points
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+
+  // 1. Grand halo bleu roi à gauche derrière le texte
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, rgba(11, 19, 43, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  // 2. Second halo violet/cyan plus doux à droite derrière la carte
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -5%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(11, 19, 43, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 }
-
-
-
-
-
