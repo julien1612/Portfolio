@@ -25,7 +25,7 @@ class SecondLevelCacheConfig
     private $_usedProperties = [];
 
     /**
-     * @template TValue of string|array
+     * @template TValue
      * @param TValue $value
      * @default {"type":null}
      * @return \Symfony\Config\Doctrine\Orm\EntityManagerConfig\SecondLevelCache\RegionCacheDriverConfig|$this

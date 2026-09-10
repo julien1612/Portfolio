@@ -1,9 +1,5 @@
 # CHANGELOG
 
-## 2.29.0
-
--  Add Symfony 8 support
-
 ## 2.20.1
 
 -   Normalize Stimulus controller name in event name

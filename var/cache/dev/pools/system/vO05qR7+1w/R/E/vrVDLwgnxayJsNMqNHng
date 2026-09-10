@@ -1,0 +1,19 @@
+<?php //easyadmin.routes.fqcn_to_route
+
+return [PHP_INT_MAX, [
+    'App\\Controller\\Admin\\DashboardController' => [
+        '' => [
+            '' => 'admin',
+        ],
+        'App\\Controller\\Admin\\ProjectCrudController' => [
+            'index' => 'admin_project_index',
+            'new' => 'admin_project_new',
+            'batchDelete' => 'admin_project_batch_delete',
+            'autocomplete' => 'admin_project_autocomplete',
+            'renderFilters' => 'admin_project_render_filters',
+            'edit' => 'admin_project_edit',
+            'delete' => 'admin_project_delete',
+            'detail' => 'admin_project_detail',
+        ],
+    ],
+]];

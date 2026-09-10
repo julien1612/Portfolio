@@ -96,7 +96,7 @@ class RememberMeConfig
     }
 
     /**
-     * @template TValue of string|array
+     * @template TValue
      * @param TValue $value
      * @return \Symfony\Config\Security\FirewallConfig\RememberMe\TokenProviderConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Security\FirewallConfig\RememberMe\TokenProviderConfig : static)

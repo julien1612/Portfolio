@@ -25,7 +25,7 @@ final class StimulusBundle extends Bundle
         return \dirname(__DIR__);
     }
 
-    public function build(ContainerBuilder $container): void
+    public function build(ContainerBuilder $container)
     {
         $container->addCompilerPass(new RemoveAssetMapperServicesCompiler());
     }

@@ -74,7 +74,7 @@ class HttpClientConfig
     }
 
     /**
-     * @template TValue of mixed
+     * @template TValue
      * @param TValue $value
      * @return \Symfony\Config\Framework\HttpClient\ScopedClientConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\HttpClient\ScopedClientConfig : static)

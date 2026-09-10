@@ -328,12 +328,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * HTTP cache configuration
      * @default {"enabled":false,"debug":"%kernel.debug%","private_headers":[],"skip_response_headers":[]}
-    */
-    public function httpCache(array $value = []): \Symfony\Config\Framework\HttpCacheConfig
+     * @return \Symfony\Config\Framework\HttpCacheConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\HttpCacheConfig : static)
+     */
+    public function httpCache(array $value = []): \Symfony\Config\Framework\HttpCacheConfig|static
     {
-        if (null === $this->httpCache) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['httpCache'] = true;
+            $this->httpCache = $value;
+
+            return $this;
+        }
+
+        if (!$this->httpCache instanceof \Symfony\Config\Framework\HttpCacheConfig) {
             $this->_usedProperties['httpCache'] = true;
             $this->httpCache = new \Symfony\Config\Framework\HttpCacheConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -344,12 +355,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * ESI configuration
      * @default {"enabled":false}
-    */
-    public function esi(array $value = []): \Symfony\Config\Framework\EsiConfig
+     * @return \Symfony\Config\Framework\EsiConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\EsiConfig : static)
+     */
+    public function esi(array $value = []): \Symfony\Config\Framework\EsiConfig|static
     {
-        if (null === $this->esi) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['esi'] = true;
+            $this->esi = $value;
+
+            return $this;
+        }
+
+        if (!$this->esi instanceof \Symfony\Config\Framework\EsiConfig) {
             $this->_usedProperties['esi'] = true;
             $this->esi = new \Symfony\Config\Framework\EsiConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -360,12 +382,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * SSI configuration
      * @default {"enabled":false}
-    */
-    public function ssi(array $value = []): \Symfony\Config\Framework\SsiConfig
+     * @return \Symfony\Config\Framework\SsiConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\SsiConfig : static)
+     */
+    public function ssi(array $value = []): \Symfony\Config\Framework\SsiConfig|static
     {
-        if (null === $this->ssi) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['ssi'] = true;
+            $this->ssi = $value;
+
+            return $this;
+        }
+
+        if (!$this->ssi instanceof \Symfony\Config\Framework\SsiConfig) {
             $this->_usedProperties['ssi'] = true;
             $this->ssi = new \Symfony\Config\Framework\SsiConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -376,12 +409,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Fragments configuration
      * @default {"enabled":false,"hinclude_default_template":null,"path":"\/_fragment"}
-    */
-    public function fragments(array $value = []): \Symfony\Config\Framework\FragmentsConfig
+     * @return \Symfony\Config\Framework\FragmentsConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\FragmentsConfig : static)
+     */
+    public function fragments(array $value = []): \Symfony\Config\Framework\FragmentsConfig|static
     {
-        if (null === $this->fragments) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['fragments'] = true;
+            $this->fragments = $value;
+
+            return $this;
+        }
+
+        if (!$this->fragments instanceof \Symfony\Config\Framework\FragmentsConfig) {
             $this->_usedProperties['fragments'] = true;
             $this->fragments = new \Symfony\Config\Framework\FragmentsConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -392,12 +436,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Profiler configuration
      * @default {"enabled":false,"collect":true,"collect_parameter":null,"only_exceptions":false,"only_main_requests":false,"dsn":"file:%kernel.cache_dir%\/profiler","collect_serializer_data":false}
-    */
-    public function profiler(array $value = []): \Symfony\Config\Framework\ProfilerConfig
+     * @return \Symfony\Config\Framework\ProfilerConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\ProfilerConfig : static)
+     */
+    public function profiler(array $value = []): \Symfony\Config\Framework\ProfilerConfig|static
     {
-        if (null === $this->profiler) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['profiler'] = true;
+            $this->profiler = $value;
+
+            return $this;
+        }
+
+        if (!$this->profiler instanceof \Symfony\Config\Framework\ProfilerConfig) {
             $this->_usedProperties['profiler'] = true;
             $this->profiler = new \Symfony\Config\Framework\ProfilerConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -408,7 +463,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
-     * @template TValue of mixed
+     * @template TValue
      * @param TValue $value
      * @default {"enabled":false,"workflows":[]}
      * @return \Symfony\Config\Framework\WorkflowsConfig|$this
@@ -434,12 +489,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Router configuration
      * @default {"enabled":false,"cache_dir":"%kernel.build_dir%","default_uri":null,"http_port":80,"https_port":443,"strict_requirements":true,"utf8":true}
-    */
-    public function router(array $value = []): \Symfony\Config\Framework\RouterConfig
+     * @return \Symfony\Config\Framework\RouterConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\RouterConfig : static)
+     */
+    public function router(array $value = []): \Symfony\Config\Framework\RouterConfig|static
     {
-        if (null === $this->router) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['router'] = true;
+            $this->router = $value;
+
+            return $this;
+        }
+
+        if (!$this->router instanceof \Symfony\Config\Framework\RouterConfig) {
             $this->_usedProperties['router'] = true;
             $this->router = new \Symfony\Config\Framework\RouterConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -450,12 +516,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Session configuration
      * @default {"enabled":false,"storage_factory_id":"session.storage.factory.native","cookie_secure":"auto","cookie_httponly":true,"cookie_samesite":"lax","metadata_update_threshold":0}
-    */
-    public function session(array $value = []): \Symfony\Config\Framework\SessionConfig
+     * @return \Symfony\Config\Framework\SessionConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\SessionConfig : static)
+     */
+    public function session(array $value = []): \Symfony\Config\Framework\SessionConfig|static
     {
-        if (null === $this->session) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['session'] = true;
+            $this->session = $value;
+
+            return $this;
+        }
+
+        if (!$this->session instanceof \Symfony\Config\Framework\SessionConfig) {
             $this->_usedProperties['session'] = true;
             $this->session = new \Symfony\Config\Framework\SessionConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -466,12 +543,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Request configuration
      * @default {"enabled":false,"formats":[]}
-    */
-    public function request(array $value = []): \Symfony\Config\Framework\RequestConfig
+     * @return \Symfony\Config\Framework\RequestConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\RequestConfig : static)
+     */
+    public function request(array $value = []): \Symfony\Config\Framework\RequestConfig|static
     {
-        if (null === $this->request) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['request'] = true;
+            $this->request = $value;
+
+            return $this;
+        }
+
+        if (!$this->request instanceof \Symfony\Config\Framework\RequestConfig) {
             $this->_usedProperties['request'] = true;
             $this->request = new \Symfony\Config\Framework\RequestConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -546,11 +634,22 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * @default {"enabled":false}
-    */
-    public function annotations(array $value = []): \Symfony\Config\Framework\AnnotationsConfig
+     * @return \Symfony\Config\Framework\AnnotationsConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\AnnotationsConfig : static)
+     */
+    public function annotations(array $value = []): \Symfony\Config\Framework\AnnotationsConfig|static
     {
-        if (null === $this->annotations) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['annotations'] = true;
+            $this->annotations = $value;
+
+            return $this;
+        }
+
+        if (!$this->annotations instanceof \Symfony\Config\Framework\AnnotationsConfig) {
             $this->_usedProperties['annotations'] = true;
             $this->annotations = new \Symfony\Config\Framework\AnnotationsConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -688,7 +787,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
-     * @template TValue of mixed
+     * @template TValue
      * @param TValue $value
      * Lock configuration
      * @default {"enabled":false,"resources":{"default":["flock"]}}
@@ -715,7 +814,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
-     * @template TValue of mixed
+     * @template TValue
      * @param TValue $value
      * Semaphore configuration
      * @default {"enabled":false,"resources":[]}
@@ -758,12 +857,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Scheduler configuration
      * @default {"enabled":false}
-    */
-    public function scheduler(array $value = []): \Symfony\Config\Framework\SchedulerConfig
+     * @return \Symfony\Config\Framework\SchedulerConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\SchedulerConfig : static)
+     */
+    public function scheduler(array $value = []): \Symfony\Config\Framework\SchedulerConfig|static
     {
-        if (null === $this->scheduler) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['scheduler'] = true;
+            $this->scheduler = $value;
+
+            return $this;
+        }
+
+        if (!$this->scheduler instanceof \Symfony\Config\Framework\SchedulerConfig) {
             $this->_usedProperties['scheduler'] = true;
             $this->scheduler = new \Symfony\Config\Framework\SchedulerConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -788,7 +898,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
-     * @template TValue of mixed
+     * @template TValue
      * @param TValue $value
      * HTTP Client configuration
      * @default {"enabled":true,"scoped_clients":[]}
@@ -862,7 +972,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
-     * @template TValue of mixed
+     * @template TValue
      * @param TValue $value
      * Rate limiter configuration
      * @default {"enabled":false,"limiters":[]}
@@ -890,7 +1000,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
     /**
      * Uid configuration
-     * @default {"enabled":false,"default_uuid_version":7,"name_based_uuid_version":5,"time_based_uuid_version":7}
+     * @default {"enabled":true,"default_uuid_version":7,"name_based_uuid_version":5,"time_based_uuid_version":7}
     */
     public function uid(array $value = []): \Symfony\Config\Framework\UidConfig
     {
@@ -905,12 +1015,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * HtmlSanitizer configuration
      * @default {"enabled":false,"sanitizers":[]}
-    */
-    public function htmlSanitizer(array $value = []): \Symfony\Config\Framework\HtmlSanitizerConfig
+     * @return \Symfony\Config\Framework\HtmlSanitizerConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\HtmlSanitizerConfig : static)
+     */
+    public function htmlSanitizer(array $value = []): \Symfony\Config\Framework\HtmlSanitizerConfig|static
     {
-        if (null === $this->htmlSanitizer) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['htmlSanitizer'] = true;
+            $this->htmlSanitizer = $value;
+
+            return $this;
+        }
+
+        if (!$this->htmlSanitizer instanceof \Symfony\Config\Framework\HtmlSanitizerConfig) {
             $this->_usedProperties['htmlSanitizer'] = true;
             $this->htmlSanitizer = new \Symfony\Config\Framework\HtmlSanitizerConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -921,12 +1042,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Webhook configuration
      * @default {"enabled":false,"message_bus":"messenger.default_bus","routing":[]}
-    */
-    public function webhook(array $value = []): \Symfony\Config\Framework\WebhookConfig
+     * @return \Symfony\Config\Framework\WebhookConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\WebhookConfig : static)
+     */
+    public function webhook(array $value = []): \Symfony\Config\Framework\WebhookConfig|static
     {
-        if (null === $this->webhook) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['webhook'] = true;
+            $this->webhook = $value;
+
+            return $this;
+        }
+
+        if (!$this->webhook instanceof \Symfony\Config\Framework\WebhookConfig) {
             $this->_usedProperties['webhook'] = true;
             $this->webhook = new \Symfony\Config\Framework\WebhookConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -937,12 +1069,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * RemoteEvent configuration
      * @default {"enabled":false}
-    */
-    public function remoteevent(array $value = []): \Symfony\Config\Framework\RemoteeventConfig
+     * @return \Symfony\Config\Framework\RemoteeventConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\RemoteeventConfig : static)
+     */
+    public function remoteevent(array $value = []): \Symfony\Config\Framework\RemoteeventConfig|static
     {
-        if (null === $this->remoteevent) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['remoteevent'] = true;
+            $this->remoteevent = $value;
+
+            return $this;
+        }
+
+        if (!$this->remoteevent instanceof \Symfony\Config\Framework\RemoteeventConfig) {
             $this->_usedProperties['remoteevent'] = true;
             $this->remoteevent = new \Symfony\Config\Framework\RemoteeventConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -953,12 +1096,23 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
     }
 
     /**
+     * @template TValue
+     * @param TValue $value
      * JSON streamer configuration
      * @default {"enabled":false}
-    */
-    public function jsonStreamer(array $value = []): \Symfony\Config\Framework\JsonStreamerConfig
+     * @return \Symfony\Config\Framework\JsonStreamerConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\JsonStreamerConfig : static)
+     */
+    public function jsonStreamer(array $value = []): \Symfony\Config\Framework\JsonStreamerConfig|static
     {
-        if (null === $this->jsonStreamer) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['jsonStreamer'] = true;
+            $this->jsonStreamer = $value;
+
+            return $this;
+        }
+
+        if (!$this->jsonStreamer instanceof \Symfony\Config\Framework\JsonStreamerConfig) {
             $this->_usedProperties['jsonStreamer'] = true;
             $this->jsonStreamer = new \Symfony\Config\Framework\JsonStreamerConfig($value);
         } elseif (0 < \func_num_args()) {
@@ -1265,7 +1419,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
 
         if (array_key_exists('uid', $value)) {
             $this->_usedProperties['uid'] = true;
-            $this->uid = \is_array($value['uid']) ? new \Symfony\Config\Framework\UidConfig($value['uid']) : $value['uid'];
+            $this->uid = new \Symfony\Config\Framework\UidConfig($value['uid']);
             unset($value['uid']);
         }
 
@@ -1446,7 +1600,7 @@ class FrameworkConfig implements \Symfony\Component\Config\Builder\ConfigBuilder
             $output['rate_limiter'] = $this->rateLimiter instanceof \Symfony\Config\Framework\RateLimiterConfig ? $this->rateLimiter->toArray() : $this->rateLimiter;
         }
         if (isset($this->_usedProperties['uid'])) {
-            $output['uid'] = $this->uid instanceof \Symfony\Config\Framework\UidConfig ? $this->uid->toArray() : $this->uid;
+            $output['uid'] = $this->uid->toArray();
         }
         if (isset($this->_usedProperties['htmlSanitizer'])) {
             $output['html_sanitizer'] = $this->htmlSanitizer instanceof \Symfony\Config\Framework\HtmlSanitizerConfig ? $this->htmlSanitizer->toArray() : $this->htmlSanitizer;

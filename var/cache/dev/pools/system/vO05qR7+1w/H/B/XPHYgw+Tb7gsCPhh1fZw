@@ -1,0 +1,49 @@
+<?php //easyadmin.routes.route_to_fqcn
+
+return [PHP_INT_MAX, [
+    'admin' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => null,
+        'crudAction' => null,
+    ],
+    'admin_project_index' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'index',
+    ],
+    'admin_project_new' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'new',
+    ],
+    'admin_project_batch_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'batchDelete',
+    ],
+    'admin_project_autocomplete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'autocomplete',
+    ],
+    'admin_project_render_filters' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'renderFilters',
+    ],
+    'admin_project_edit' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'edit',
+    ],
+    'admin_project_delete' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'delete',
+    ],
+    'admin_project_detail' => [
+        'dashboardControllerFqcn' => 'App\\Controller\\Admin\\DashboardController',
+        'crudControllerFqcn' => 'App\\Controller\\Admin\\ProjectCrudController',
+        'crudAction' => 'detail',
+    ],
+]];

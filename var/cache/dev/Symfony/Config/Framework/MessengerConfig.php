@@ -38,9 +38,22 @@ class MessengerConfig
         return $this;
     }
 
-    public function routing(string $message_class, array $value = []): \Symfony\Config\Framework\Messenger\RoutingConfig
+    /**
+     * @template TValue
+     * @param TValue $value
+     * @return \Symfony\Config\Framework\Messenger\RoutingConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\Framework\Messenger\RoutingConfig : static)
+     */
+    public function routing(string $message_class, array $value = []): \Symfony\Config\Framework\Messenger\RoutingConfig|static
     {
-        if (!isset($this->routing[$message_class])) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['routing'] = true;
+            $this->routing[$message_class] = $value;
+
+            return $this;
+        }
+
+        if (!isset($this->routing[$message_class]) || !$this->routing[$message_class] instanceof \Symfony\Config\Framework\Messenger\RoutingConfig) {
             $this->_usedProperties['routing'] = true;
             $this->routing[$message_class] = new \Symfony\Config\Framework\Messenger\RoutingConfig($value);
         } elseif (1 < \func_num_args()) {
@@ -66,7 +79,7 @@ class MessengerConfig
     }
 
     /**
-     * @template TValue of string|array
+     * @template TValue
      * @param TValue $value
      * @return \Symfony\Config\Framework\Messenger\TransportConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Framework\Messenger\TransportConfig : static)

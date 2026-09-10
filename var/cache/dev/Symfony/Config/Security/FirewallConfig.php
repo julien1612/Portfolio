@@ -228,7 +228,7 @@ class FirewallConfig
     }
 
     /**
-     * @template TValue of mixed
+     * @template TValue
      * @param TValue $value
      * @return \Symfony\Config\Security\FirewallConfig\LogoutConfig|$this
      * @psalm-return (TValue is array ? \Symfony\Config\Security\FirewallConfig\LogoutConfig : static)

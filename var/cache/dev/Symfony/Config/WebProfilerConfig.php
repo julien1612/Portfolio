@@ -18,12 +18,23 @@ class WebProfilerConfig implements \Symfony\Component\Config\Builder\ConfigBuild
     private $_usedProperties = [];
 
     /**
+     * @template TValue
+     * @param TValue $value
      * Profiler toolbar configuration
      * @default {"enabled":false,"ajax_replace":false}
-    */
-    public function toolbar(array $value = []): \Symfony\Config\WebProfiler\ToolbarConfig
+     * @return \Symfony\Config\WebProfiler\ToolbarConfig|$this
+     * @psalm-return (TValue is array ? \Symfony\Config\WebProfiler\ToolbarConfig : static)
+     */
+    public function toolbar(array $value = []): \Symfony\Config\WebProfiler\ToolbarConfig|static
     {
-        if (null === $this->toolbar) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['toolbar'] = true;
+            $this->toolbar = $value;
+
+            return $this;
+        }
+
+        if (!$this->toolbar instanceof \Symfony\Config\WebProfiler\ToolbarConfig) {
             $this->_usedProperties['toolbar'] = true;
             $this->toolbar = new \Symfony\Config\WebProfiler\ToolbarConfig($value);
         } elseif (0 < \func_num_args()) {
