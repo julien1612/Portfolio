@@ -130,7 +130,7 @@
                             
                             {% if project.coverImage %}
                                 <div class="project-img-wrapper">
-                                    <img src="{{ asset('pictures/' ~ project.coverImage) | imagine_filter('portfolio_webp') }}" class="card-img-top project-img" alt="{{ project.title }}">
+                                    <img src="{{ asset('pictures/' ~ project.coverImage) }}" class="card-img-top project-img" alt="{{ project.title }}">
                                 </div>
                             {% endif %}
 
@@ -178,13 +178,13 @@
                     </div>
 
                     <div class="modal-body p-4">
-                        {# Galerie Carousel d'images complémentaires si présentes #}
+                        {# Galerie Carousel d'images complémentaires #}
                         {% if project.images is defined and project.images is not empty %}
                             <div id="carouselProject{{ project.id }}" class="carousel slide mb-4" data-bs-ride="carousel">
                                 <div class="carousel-inner rounded shadow-lg">
                                     {% for img in project.images %}
                                         <div class="carousel-item {% if loop.first %}active{% endif %}">
-                                            <img src="{{ asset('pictures/' ~ img) | imagine_filter('portfolio_webp') }}" class="d-block w-100" alt="{{ project.title }} capture {{ loop.index }}">
+                                            <img src="{{ asset('pictures/' ~ img.imageName) }}" class="d-block w-100" alt="{{ project.title }} capture {{ loop.index }}">
                                         </div>
                                     {% endfor %}
                                 </div>
@@ -199,7 +199,7 @@
                             </div>
                         {% elseif project.coverImage %}
                             <div class="text-center mb-4">
-                                <img src="{{ asset('pictures/' ~ project.coverImage) | imagine_filter('portfolio_webp') }}" class="img-fluid rounded shadow-lg" style="max-height: 400px;" alt="{{ project.title }}">
+                                <img src="{{ asset('pictures/' ~ project.coverImage) }}" class="img-fluid rounded shadow-lg" style="max-height: 400px;" alt="{{ project.title }}">
                             </div>
                         {% endif %}
 

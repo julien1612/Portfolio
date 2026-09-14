@@ -262,7 +262,7 @@ class __TwigTemplate_8361ecdd04bff62d66c0a08f150201d2 extends Template
                 yield "                                <div class=\"project-img-wrapper\">
                                     <img src=\"";
                 // line 133
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Liip\ImagineBundle\Templating\FilterExtension']->filter($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 133))), "portfolio_webp"), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 133))), "html", null, true);
                 yield "\" class=\"card-img-top project-img\" alt=\"";
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 133), "html", null, true);
                 yield "\">
@@ -404,7 +404,7 @@ class __TwigTemplate_8361ecdd04bff62d66c0a08f150201d2 extends Template
                     yield "\">
                                             <img src=\"";
                     // line 187
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Liip\ImagineBundle\Templating\FilterExtension']->filter($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . $context["img"])), "portfolio_webp"), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["img"], "imageName", [], "any", false, false, false, 187))), "html", null, true);
                     yield "\" class=\"d-block w-100\" alt=\"";
                     yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 187), "html", null, true);
                     yield " capture ";
@@ -452,7 +452,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                 yield "                            <div class=\"text-center mb-4\">
                                 <img src=\"";
                 // line 202
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Liip\ImagineBundle\Templating\FilterExtension']->filter($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 202))), "portfolio_webp"), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 202))), "html", null, true);
                 yield "\" class=\"img-fluid rounded shadow-lg\" style=\"max-height: 400px;\" alt=\"";
                 yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 202), "html", null, true);
                 yield "\">
@@ -701,7 +701,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                             
                             {% if project.coverImage %}
                                 <div class=\"project-img-wrapper\">
-                                    <img src=\"{{ asset('pictures/' ~ project.coverImage) | imagine_filter('portfolio_webp') }}\" class=\"card-img-top project-img\" alt=\"{{ project.title }}\">
+                                    <img src=\"{{ asset('pictures/' ~ project.coverImage) }}\" class=\"card-img-top project-img\" alt=\"{{ project.title }}\">
                                 </div>
                             {% endif %}
 
@@ -749,13 +749,13 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                     </div>
 
                     <div class=\"modal-body p-4\">
-                        {# Galerie Carousel d'images complémentaires si présentes #}
+                        {# Galerie Carousel d'images complémentaires #}
                         {% if project.images is defined and project.images is not empty %}
                             <div id=\"carouselProject{{ project.id }}\" class=\"carousel slide mb-4\" data-bs-ride=\"carousel\">
                                 <div class=\"carousel-inner rounded shadow-lg\">
                                     {% for img in project.images %}
                                         <div class=\"carousel-item {% if loop.first %}active{% endif %}\">
-                                            <img src=\"{{ asset('pictures/' ~ img) | imagine_filter('portfolio_webp') }}\" class=\"d-block w-100\" alt=\"{{ project.title }} capture {{ loop.index }}\">
+                                            <img src=\"{{ asset('pictures/' ~ img.imageName) }}\" class=\"d-block w-100\" alt=\"{{ project.title }} capture {{ loop.index }}\">
                                         </div>
                                     {% endfor %}
                                 </div>
@@ -770,7 +770,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                             </div>
                         {% elseif project.coverImage %}
                             <div class=\"text-center mb-4\">
-                                <img src=\"{{ asset('pictures/' ~ project.coverImage) | imagine_filter('portfolio_webp') }}\" class=\"img-fluid rounded shadow-lg\" style=\"max-height: 400px;\" alt=\"{{ project.title }}\">
+                                <img src=\"{{ asset('pictures/' ~ project.coverImage) }}\" class=\"img-fluid rounded shadow-lg\" style=\"max-height: 400px;\" alt=\"{{ project.title }}\">
                             </div>
                         {% endif %}
 
@@ -808,7 +808,6 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
         </div>
     {% endfor %}
 
-{% endblock %}
-", "home/index.html.twig", "/Users/julienchassin/Documents/Portfolio/templates/home/index.html.twig");
+{% endblock %}", "home/index.html.twig", "/Users/julienchassin/Documents/Portfolio/templates/home/index.html.twig");
     }
 }
