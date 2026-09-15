@@ -123,8 +123,8 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/img_4.jpg"), "html", null, true);
         yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 2\">
                 <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
-                    <h2 class=\"fw-bold text-uppercase\">Développement Full Stack</h2>
-                    <p>Création d'applications web performantes avec Symfony & React</p>
+                    <h2 class=\"fw-bold text-uppercase\">Développement web</h2>
+                    <p>Création d'applications web performantes avec PHP & Symfony</p>
                 </div>
             </div>
 
@@ -137,7 +137,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 3\">
                 <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
                     <h2 class=\"fw-bold text-uppercase\">Solutions Sur Mesure</h2>
-                    <p>Logos, sites vitrines, e-commerce et applications métier</p>
+                    <p>Sites vitrines, applications et outils métier</p>
                 </div>
             </div>
 
@@ -184,9 +184,8 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
 
                     <!-- BOUTONS D'ACTION -->
                     <div class=\"d-flex gap-3 mt-4\">
-                        <a href=\"#contact\" class=\"btn btn-primary btn-lg rounded-pill px-4\">Me contacter</a>
                         <a href=\"";
-        // line 85
+        // line 84
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/CV_CHASSIN_Julien.pdf"), "html", null, true);
         yield "\" download class=\"btn btn-outline-light btn-lg rounded-pill px-4\">Télécharger mon CV</a>
                     </div>
@@ -196,24 +195,20 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                 <div class=\"col-lg-5\" data-aos=\"fade-left\">
                     <div class=\"card custom-card p-4\">
                         <div class=\"card-body\">
-                            <h3 class=\"h5 text-white mb-4 fw-bold\">Mes forces :</h3>
+                            <h3 class=\"h5 text-white mb-4 fw-bold\">Compétences</h3>
 
                             <ul class=\"list-unstyled text-light mb-0\">
                                 <li class=\"mb-3 d-flex align-items-center\">
-                                    <i class=\"bi bi-shield-check text-primary fs-5 me-3\"></i>
-                                    <span><strong>Rigueur & Sang-froid :</strong> 15 ans d'expérience SMUR/Urgences</span>
+                                    <i class=\"bi-database text-primary fs-5 me-3\"></i>
+                                    <span><strong>Back-end & BDD :</strong>PHP 8, Symfony 7, Doctrine ORM, MySQL / SQLite, conception d'API REST</span>
                                 </li>
                                 <li class=\"mb-3 d-flex align-items-center\">
-                                    <i class=\"bi bi-code-slash text-primary fs-5 me-3\"></i>
-                                    <span><strong>Core Stack :</strong> PHP 7.3, Symfony, Doctrine, Twig</span>
+                                    <i class=\"bi-palette text-primary fs-5 me-3\"></i>
+                                    <span><strong>Front-end & UI :</strong> Integration SCSS / Bootstrap 5, Twig, JavaScript vanilla, interfaces responsive</span>
                                 </li>
                                 <li class=\"mb-3 d-flex align-items-center\">
-                                    <i class=\"bi bi-cpu text-primary fs-5 me-3\"></i>
-                                    <span><strong>Expertise :</strong> Applications sur-mesure & Gestion de données</span>
-                                </li>
-                                <li class=\"d-flex align-items-center\">
-                                    <i class=\"bi bi-check-circle-fill text-primary fs-5 me-3\"></i>
-                                    <span><strong>Intégration :</strong> SCSS, Bootstrap 5, JavaScript</span>
+                                    <i class=\"bi-gear-fill text-primary fs-5 me-3\"></i>
+                                    <span><strong>Méthodes & Outils :</strong> Git / GitHub, EasyAdmin, LiipImagine, respect des normes PSR, sensibilisation à la sécurité</span>
                                 </li>
                             </ul>
                         </div>
@@ -231,9 +226,9 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
 
             <div class=\"row g-4\">
                 ";
-        // line 127
+        // line 122
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 127, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 122, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -249,52 +244,52 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
-            // line 128
+            // line 123
             yield "                    <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 128) * 100), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 123) * 100), "html", null, true);
             yield "\">
                         <div class=\"card custom-card h-100 overflow-hidden d-flex flex-column\">
                             
                             ";
-            // line 131
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 131)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 132
+            // line 126
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 126)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 127
                 yield "                                <div class=\"project-img-wrapper\">
                                     <img src=\"";
-                // line 133
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 133))), "html", null, true);
+                // line 128
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 128))), "html", null, true);
                 yield "\" class=\"card-img-top project-img\" alt=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 133), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 128), "html", null, true);
                 yield "\">
                                 </div>
                             ";
             }
-            // line 136
+            // line 131
             yield "
                             <div class=\"card-body d-flex flex-column p-4\">
                                 <h3 class=\"card-title h4 text-white fw-bold mb-2\">";
-            // line 138
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 138), "html", null, true);
+            // line 133
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 133), "html", null, true);
             yield "</h3>
                                 
                                 <p class=\"card-text text-light opacity-75 fs-6 mb-3 flex-grow-1\">
                                     ";
-            // line 141
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "shortDescription", [], "any", false, false, false, 141), "html", null, true);
+            // line 136
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "shortDescription", [], "any", false, false, false, 136), "html", null, true);
             yield "
                                 </p>
 
                                 ";
-            // line 144
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 144)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 145
+            // line 139
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 139)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 140
                 yield "                                    <div class=\"mb-3 d-flex flex-wrap gap-1\">
                                         ";
-                // line 146
+                // line 141
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 146));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 141));
                 foreach ($context['_seq'] as $context["_key"] => $context["tech"]) {
-                    // line 147
+                    // line 142
                     yield "                                            <span class=\"badge bg-dark border border-secondary text-light\">";
                     yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["tech"], "html", null, true);
                     yield "</span>
@@ -303,15 +298,15 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['tech'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 149
+                // line 144
                 yield "                                    </div>
                                 ";
             }
-            // line 151
+            // line 146
             yield "
                                 <button type=\"button\" class=\"btn btn-outline-primary btn-sm rounded-pill mt-auto align-self-start px-3\" data-bs-toggle=\"modal\" data-bs-target=\"#modalProject";
-            // line 152
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 152), "html", null, true);
+            // line 147
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 147), "html", null, true);
             yield "\">
                                     Voir le projet
                                 </button>
@@ -329,9 +324,9 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                 $context['loop']['last'] = 0 === $context['loop']['revindex0'];
             }
         }
-        // line 158
+        // line 153
         if (!$context['_iterated']) {
-            // line 159
+            // line 154
             yield "                    <div class=\"col-12 text-center text-light opacity-75\">
                         <p class=\"fs-5\">Aucune réalisation publiée pour le moment.</p>
                     </div>
@@ -340,7 +335,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['project'], $context['_parent'], $context['_iterated'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 163
+        // line 158
         yield "            </div>
         </div>
     </section>
@@ -349,39 +344,39 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
     <!-- MODAUX POPUP PROJETS DYNAMIQUES            -->
     <!-- ========================================== -->
     ";
-        // line 170
+        // line 165
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 170, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 165, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
-            // line 171
+            // line 166
             yield "        <div class=\"modal fade\" id=\"modalProject";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 171), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 166), "html", null, true);
             yield "\" tabindex=\"-1\" aria-hidden=\"true\">
             <div class=\"modal-dialog modal-xl modal-dialog-centered\">
                 <div class=\"modal-content bg-dark text-white border-secondary\">
                     
                     <div class=\"modal-header border-secondary\">
                         <h5 class=\"modal-title fw-bold\">";
-            // line 176
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 176), "html", null, true);
+            // line 171
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 171), "html", null, true);
             yield "</h5>
                         <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"modal\" aria-label=\"Fermer\"></button>
                     </div>
 
                     <div class=\"modal-body p-4\">
                         ";
-            // line 182
+            // line 177
             yield "                        ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", true, true, false, 182) &&  !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 182)))) {
-                // line 183
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", true, true, false, 177) &&  !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 177)))) {
+                // line 178
                 yield "                            <div id=\"carouselProject";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 183), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 178), "html", null, true);
                 yield "\" class=\"carousel slide mb-4\" data-bs-ride=\"carousel\">
                                 <div class=\"carousel-inner rounded shadow-lg\">
                                     ";
-                // line 185
+                // line 180
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 185));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 180));
                 $context['loop'] = [
                   'parent' => $context['_parent'],
                   'index0' => 0,
@@ -396,19 +391,19 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-                    // line 186
+                    // line 181
                     yield "                                        <div class=\"carousel-item ";
-                    if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 186)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                    if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 181)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
                         yield "active";
                     }
                     yield "\">
                                             <img src=\"";
-                    // line 187
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["img"], "imageName", [], "any", false, false, false, 187))), "html", null, true);
+                    // line 182
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["img"], "imageName", [], "any", false, false, false, 182))), "html", null, true);
                     yield "\" class=\"d-block w-100\" alt=\"";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 187), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 182), "html", null, true);
                     yield " capture ";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 187), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 182), "html", null, true);
                     yield "\">
                                         </div>
                                     ";
@@ -424,61 +419,61 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 190
+                // line 185
                 yield "                                </div>
                                 ";
-                // line 191
-                if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 191)) > 1)) {
-                    // line 192
+                // line 186
+                if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 186)) > 1)) {
+                    // line 187
                     yield "                                    <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselProject";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 192), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 187), "html", null, true);
                     yield "\" data-bs-slide=\"prev\">
                                         <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
                                     </button>
                                     <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselProject";
-                    // line 195
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 195), "html", null, true);
+                    // line 190
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 190), "html", null, true);
                     yield "\" data-bs-slide=\"next\">
                                         <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
                                     </button>
                                 ";
                 }
-                // line 199
+                // line 194
                 yield "                            </div>
                         ";
-            } elseif ((($tmp = CoreExtension::getAttribute($this->env, $this->source,             // line 200
-$context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 201
+            } elseif ((($tmp = CoreExtension::getAttribute($this->env, $this->source,             // line 195
+$context["project"], "coverImage", [], "any", false, false, false, 195)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 196
                 yield "                            <div class=\"text-center mb-4\">
                                 <img src=\"";
-                // line 202
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 202))), "html", null, true);
+                // line 197
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 197))), "html", null, true);
                 yield "\" class=\"img-fluid rounded shadow-lg\" style=\"max-height: 400px;\" alt=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 202), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 197), "html", null, true);
                 yield "\">
                             </div>
                         ";
             }
-            // line 205
+            // line 200
             yield "
                         <div class=\"lead text-light opacity-90 mb-4\">
                             ";
-            // line 207
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["project"], "fullDescription", [], "any", false, false, false, 207);
+            // line 202
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["project"], "fullDescription", [], "any", false, false, false, 202);
             yield "
                         </div>
 
                         ";
-            // line 210
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 210)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 211
+            // line 205
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 205)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 206
                 yield "                            <div class=\"d-flex flex-wrap gap-2 mb-3\">
                                 ";
-                // line 212
+                // line 207
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 212));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 207));
                 foreach ($context['_seq'] as $context["_key"] => $context["tech"]) {
-                    // line 213
+                    // line 208
                     yield "                                    <span class=\"badge bg-primary\">";
                     yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["tech"], "html", null, true);
                     yield "</span>
@@ -487,38 +482,38 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['tech'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 215
+                // line 210
                 yield "                            </div>
                         ";
             }
-            // line 217
+            // line 212
             yield "                    </div>
 
                     <div class=\"modal-footer border-secondary justify-content-between\">
                         <div>
                             ";
-            // line 221
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 221)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 222
+            // line 216
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 216)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 217
                 yield "                                <a href=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 222), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 217), "html", null, true);
                 yield "\" target=\"_blank\" class=\"btn btn-outline-light rounded-pill me-2\">
                                     <i class=\"bi bi-github me-2\"></i>Voir sur GitHub
                                 </a>
                             ";
             }
-            // line 226
+            // line 221
             yield "                            ";
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 226)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 227
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 221)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 222
                 yield "                                <a href=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 227), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 222), "html", null, true);
                 yield "\" target=\"_blank\" class=\"btn btn-outline-info rounded-pill\">
                                     <i class=\"bi bi-globe me-2\"></i>Visiter le site
                                 </a>
                             ";
             }
-            // line 231
+            // line 226
             yield "                        </div>
                         <button type=\"button\" class=\"btn btn-secondary rounded-pill\" data-bs-dismiss=\"modal\">Fermer</button>
                     </div>
@@ -531,7 +526,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['project'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 239
+        // line 234
         yield "
 ";
         
@@ -564,7 +559,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
      */
     public function getDebugInfo(): array
     {
-        return array (  535 => 239,  522 => 231,  514 => 227,  511 => 226,  503 => 222,  501 => 221,  495 => 217,  491 => 215,  482 => 213,  478 => 212,  475 => 211,  473 => 210,  467 => 207,  463 => 205,  455 => 202,  452 => 201,  450 => 200,  447 => 199,  440 => 195,  433 => 192,  431 => 191,  428 => 190,  407 => 187,  400 => 186,  383 => 185,  377 => 183,  374 => 182,  366 => 176,  357 => 171,  353 => 170,  344 => 163,  335 => 159,  333 => 158,  314 => 152,  311 => 151,  307 => 149,  298 => 147,  294 => 146,  291 => 145,  289 => 144,  283 => 141,  277 => 138,  273 => 136,  265 => 133,  262 => 132,  260 => 131,  253 => 128,  235 => 127,  190 => 85,  136 => 34,  123 => 24,  110 => 14,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  530 => 234,  517 => 226,  509 => 222,  506 => 221,  498 => 217,  496 => 216,  490 => 212,  486 => 210,  477 => 208,  473 => 207,  470 => 206,  468 => 205,  462 => 202,  458 => 200,  450 => 197,  447 => 196,  445 => 195,  442 => 194,  435 => 190,  428 => 187,  426 => 186,  423 => 185,  402 => 182,  395 => 181,  378 => 180,  372 => 178,  369 => 177,  361 => 171,  352 => 166,  348 => 165,  339 => 158,  330 => 154,  328 => 153,  309 => 147,  306 => 146,  302 => 144,  293 => 142,  289 => 141,  286 => 140,  284 => 139,  278 => 136,  272 => 133,  268 => 131,  260 => 128,  257 => 127,  255 => 126,  248 => 123,  230 => 122,  189 => 84,  136 => 34,  123 => 24,  110 => 14,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -594,8 +589,8 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                 <div class=\"carousel-overlay\"></div>
                 <img src=\"{{ asset('pictures/img_4.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 2\">
                 <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
-                    <h2 class=\"fw-bold text-uppercase\">Développement Full Stack</h2>
-                    <p>Création d'applications web performantes avec Symfony & React</p>
+                    <h2 class=\"fw-bold text-uppercase\">Développement web</h2>
+                    <p>Création d'applications web performantes avec PHP & Symfony</p>
                 </div>
             </div>
 
@@ -605,7 +600,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                 <img src=\"{{ asset('pictures/img_3.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 3\">
                 <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
                     <h2 class=\"fw-bold text-uppercase\">Solutions Sur Mesure</h2>
-                    <p>Logos, sites vitrines, e-commerce et applications métier</p>
+                    <p>Sites vitrines, applications et outils métier</p>
                 </div>
             </div>
 
@@ -652,7 +647,6 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
 
                     <!-- BOUTONS D'ACTION -->
                     <div class=\"d-flex gap-3 mt-4\">
-                        <a href=\"#contact\" class=\"btn btn-primary btn-lg rounded-pill px-4\">Me contacter</a>
                         <a href=\"{{ asset('pictures/CV_CHASSIN_Julien.pdf') }}\" download class=\"btn btn-outline-light btn-lg rounded-pill px-4\">Télécharger mon CV</a>
                     </div>
                 </div>
@@ -661,24 +655,20 @@ $context["project"], "coverImage", [], "any", false, false, false, 200)) && $tmp
                 <div class=\"col-lg-5\" data-aos=\"fade-left\">
                     <div class=\"card custom-card p-4\">
                         <div class=\"card-body\">
-                            <h3 class=\"h5 text-white mb-4 fw-bold\">Mes forces :</h3>
+                            <h3 class=\"h5 text-white mb-4 fw-bold\">Compétences</h3>
 
                             <ul class=\"list-unstyled text-light mb-0\">
                                 <li class=\"mb-3 d-flex align-items-center\">
-                                    <i class=\"bi bi-shield-check text-primary fs-5 me-3\"></i>
-                                    <span><strong>Rigueur & Sang-froid :</strong> 15 ans d'expérience SMUR/Urgences</span>
+                                    <i class=\"bi-database text-primary fs-5 me-3\"></i>
+                                    <span><strong>Back-end & BDD :</strong>PHP 8, Symfony 7, Doctrine ORM, MySQL / SQLite, conception d'API REST</span>
                                 </li>
                                 <li class=\"mb-3 d-flex align-items-center\">
-                                    <i class=\"bi bi-code-slash text-primary fs-5 me-3\"></i>
-                                    <span><strong>Core Stack :</strong> PHP 7.3, Symfony, Doctrine, Twig</span>
+                                    <i class=\"bi-palette text-primary fs-5 me-3\"></i>
+                                    <span><strong>Front-end & UI :</strong> Integration SCSS / Bootstrap 5, Twig, JavaScript vanilla, interfaces responsive</span>
                                 </li>
                                 <li class=\"mb-3 d-flex align-items-center\">
-                                    <i class=\"bi bi-cpu text-primary fs-5 me-3\"></i>
-                                    <span><strong>Expertise :</strong> Applications sur-mesure & Gestion de données</span>
-                                </li>
-                                <li class=\"d-flex align-items-center\">
-                                    <i class=\"bi bi-check-circle-fill text-primary fs-5 me-3\"></i>
-                                    <span><strong>Intégration :</strong> SCSS, Bootstrap 5, JavaScript</span>
+                                    <i class=\"bi-gear-fill text-primary fs-5 me-3\"></i>
+                                    <span><strong>Méthodes & Outils :</strong> Git / GitHub, EasyAdmin, LiipImagine, respect des normes PSR, sensibilisation à la sécurité</span>
                                 </li>
                             </ul>
                         </div>

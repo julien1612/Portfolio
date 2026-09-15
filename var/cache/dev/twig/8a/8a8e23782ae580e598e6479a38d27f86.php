@@ -78,11 +78,11 @@ class __TwigTemplate_2859239f2574cf8ea01b42f736c4ff0d extends Template
         // line 22
         yield "\">Projets</a>
 \t\t\t\t</li>
-\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t<!--<li class=\"nav-item\">
 \t\t\t\t\t<a class=\"nav-link color-link";
         // line 25
         yield "\">Compétences</a>
-\t\t\t\t</li>
+\t\t\t\t</li>-->
 \t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t<a class=\"nav-link color-link";
         // line 28
@@ -152,9 +152,9 @@ class __TwigTemplate_2859239f2574cf8ea01b42f736c4ff0d extends Template
 \t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t<a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#projets\" #}\">Projets</a>
 \t\t\t\t</li>
-\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t<!--<li class=\"nav-item\">
 \t\t\t\t\t<a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#competences\" #}\">Compétences</a>
-\t\t\t\t</li>
+\t\t\t\t</li>-->
 \t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t<a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#contact\" #}\">Contact</a>
 \t\t\t\t</li>

@@ -1,0 +1,32 @@
+/* assets/styles/login.scss */
+body.login-page {
+    background-color: #0d1117;
+    color: #f0f6fc;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.card-login {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+
+    .form-control {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        color: #fff;
+
+        &:focus {
+            background-color: #0d1117;
+            color: #fff;
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 0.25rem rgba(88, 166, 255, 0.25);
+        }
+    }
+}
