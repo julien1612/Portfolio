@@ -142,8 +142,14 @@ $bg-dark: #0b132b;
   }
 }
 
+#apropos {
+  scroll-margin-top: 80px; // Décale sous la navbar sans casser le layout
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
 #about,
-#projects {
+#projets {
   background-color: #0b132b;
   position: relative;
   overflow: hidden;

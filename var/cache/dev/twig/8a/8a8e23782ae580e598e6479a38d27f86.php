@@ -69,24 +69,13 @@ class __TwigTemplate_2859239f2574cf8ea01b42f736c4ff0d extends Template
 \t\t<div class=\"collapse navbar-collapse\" id=\"navbarport\">
 \t\t\t<ul class=\"navbar-nav ms-auto text-center gap-2 mt-3 mt-lg-0\">
 \t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link";
-        // line 19
-        yield "\">À propos</a>
+\t\t\t\t\t<a class=\"nav-link color-link\" href=\"#apropos\">À propos</a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link";
-        // line 22
-        yield "\">Projets</a>
+\t\t\t\t\t<a class=\"nav-link color-link\" href=\"#projets\">Projets</a>
 \t\t\t\t</li>
-\t\t\t\t<!--<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link";
-        // line 25
-        yield "\">Compétences</a>
-\t\t\t\t</li>-->
 \t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link";
-        // line 28
-        yield "\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link color-link\" href=\"#contact\">Contact</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</div>
@@ -124,7 +113,7 @@ class __TwigTemplate_2859239f2574cf8ea01b42f736c4ff0d extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  89 => 28,  84 => 25,  79 => 22,  74 => 19,  57 => 5,  53 => 4,  48 => 1,);
+        return array (  57 => 5,  53 => 4,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -147,16 +136,13 @@ class __TwigTemplate_2859239f2574cf8ea01b42f736c4ff0d extends Template
 \t\t<div class=\"collapse navbar-collapse\" id=\"navbarport\">
 \t\t\t<ul class=\"navbar-nav ms-auto text-center gap-2 mt-3 mt-lg-0\">
 \t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#}\">À propos</a>
+\t\t\t\t\t<a class=\"nav-link color-link\" href=\"#apropos\">À propos</a>
 \t\t\t\t</li>
 \t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#projets\" #}\">Projets</a>
+\t\t\t\t\t<a class=\"nav-link color-link\" href=\"#projets\">Projets</a>
 \t\t\t\t</li>
-\t\t\t\t<!--<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#competences\" #}\">Compétences</a>
-\t\t\t\t</li>-->
 \t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t<a class=\"nav-link color-link{#\" href=\"{{ path('app_home') }}#contact\" #}\">Contact</a>
+\t\t\t\t\t<a class=\"nav-link color-link\" href=\"#contact\">Contact</a>
 \t\t\t\t</li>
 \t\t\t</ul>
 \t\t</div>

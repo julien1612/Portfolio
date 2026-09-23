@@ -168,7 +168,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
 
                 <!-- COLONNE TEXTE -->
                 <div class=\"col-lg-7\" data-aos=\"fade-right\">
-                    <h2 class=\"fw-bold text-white mb-4\">À propos</h2>
+                    <h2 class=\"fw-bold text-white mb-4\" id=\"apropos\">À propos</h2>
 
                     <p class=\"text-light lead\">
                         Développeur Web spécialisé sur l'écosystème <strong>PHP / Symfony</strong>, je conçois des applications sur-mesure, fiables et orientées métier.
@@ -220,7 +220,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
     </section>
 
     <!-- SECTION PROJETS DYNAMIQUE -->
-    <section id=\"projects\" class=\"py-5\">
+    <section id=\"projets\" class=\"py-5\">
         <div class=\"container py-4\">
             <h2 class=\"text-center mb-5 fw-bold text-white\" data-aos=\"fade-up\">Mes Réalisations</h2>
 
@@ -631,7 +631,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 195)) && $tmp
 
                 <!-- COLONNE TEXTE -->
                 <div class=\"col-lg-7\" data-aos=\"fade-right\">
-                    <h2 class=\"fw-bold text-white mb-4\">À propos</h2>
+                    <h2 class=\"fw-bold text-white mb-4\" id=\"apropos\">À propos</h2>
 
                     <p class=\"text-light lead\">
                         Développeur Web spécialisé sur l'écosystème <strong>PHP / Symfony</strong>, je conçois des applications sur-mesure, fiables et orientées métier.
@@ -680,7 +680,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 195)) && $tmp
     </section>
 
     <!-- SECTION PROJETS DYNAMIQUE -->
-    <section id=\"projects\" class=\"py-5\">
+    <section id=\"projets\" class=\"py-5\">
         <div class=\"container py-4\">
             <h2 class=\"text-center mb-5 fw-bold text-white\" data-aos=\"fade-up\">Mes Réalisations</h2>
 
