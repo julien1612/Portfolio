@@ -54,4 +54,9 @@ class ProjectImage
         $this->project = $project;
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return $this->imageName ?? 'Image';
+    }
 }
