@@ -32,7 +32,7 @@ class ContactType extends AbstractType
             ])
             ->add('subject', TextType::class, [
                 'label' => 'Sujet',
-                'attr' => ['placeholder' => 'Ex: Renfort Symfony / Projet au forfait'],
+                'attr' => ['placeholder' => 'Ex: Création de site vitrine, modification, devis...'],
                 'constraints' => [
                     new Assert\NotBlank(['message' => 'Veuillez indiquer un sujet.']),
                 ],

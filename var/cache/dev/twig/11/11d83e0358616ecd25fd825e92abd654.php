@@ -37,6 +37,7 @@ class __TwigTemplate_7c1b1bfa84ecf8de79959aa626ee96ce extends Template
             'javascripts' => [$this, 'block_javascripts'],
             'header' => [$this, 'block_header'],
             'body' => [$this, 'block_body'],
+            'footer' => [$this, 'block_footer'],
         ];
     }
 
@@ -93,6 +94,11 @@ class __TwigTemplate_7c1b1bfa84ecf8de79959aa626ee96ce extends Template
         // line 35
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
         // line 36
+        yield "
+\t\t";
+        // line 37
+        yield from $this->unwrap()->yieldBlock('footer', $context, $blocks);
+        // line 40
         yield "
 \t\t<!-- JS AOS -->
 \t\t<script src=\"https://unpkg.com/aos@next/dist/aos.js\"></script>
@@ -238,6 +244,33 @@ class __TwigTemplate_7c1b1bfa84ecf8de79959aa626ee96ce extends Template
         yield from [];
     }
 
+    // line 37
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_footer(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
+
+        // line 38
+        yield "\t\t\t";
+        yield from $this->load("partial/footer.html.twig", 38)->unwrap()->yield($context);
+        // line 39
+        yield "\t\t";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
     /**
      * @codeCoverageIgnore
      */
@@ -251,7 +284,7 @@ class __TwigTemplate_7c1b1bfa84ecf8de79959aa626ee96ce extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  220 => 35,  209 => 33,  206 => 32,  193 => 31,  179 => 27,  166 => 26,  152 => 23,  139 => 22,  115 => 6,  96 => 36,  94 => 35,  91 => 34,  89 => 31,  85 => 29,  83 => 26,  80 => 25,  78 => 22,  62 => 8,  60 => 6,  53 => 1,);
+        return array (  264 => 39,  261 => 38,  248 => 37,  226 => 35,  215 => 33,  212 => 32,  199 => 31,  185 => 27,  172 => 26,  158 => 23,  145 => 22,  121 => 6,  102 => 40,  100 => 37,  97 => 36,  95 => 35,  92 => 34,  90 => 31,  86 => 29,  84 => 26,  81 => 25,  79 => 22,  63 => 8,  61 => 6,  54 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -291,6 +324,10 @@ class __TwigTemplate_7c1b1bfa84ecf8de79959aa626ee96ce extends Template
 \t\t{% endblock %}
 
 \t\t{% block body %}{% endblock %}
+
+\t\t{% block footer %}
+\t\t\t{% include 'partial/footer.html.twig' %}
+\t\t{% endblock %}
 
 \t\t<!-- JS AOS -->
 \t\t<script src=\"https://unpkg.com/aos@next/dist/aos.js\"></script>

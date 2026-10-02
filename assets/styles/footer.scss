@@ -1,0 +1,28 @@
+/* Footer styles */
+footer {
+  // Fond sombre
+  background-color: #080d1e;
+
+  // Texte secondaire & copyright en gris clair
+  p, span:not(.fw-bold) {
+    color: #94a3b8 !important;
+  }
+
+  // Titre principal "Julien Chassin"
+  .fw-bold {
+    color: #ffffff !important;
+  }
+
+  // Tous les liens et icônes cliquables au repos
+  a, i {
+    color: #94a3b8 !important; // Ou #ffffff si tu les veux en blanc pur au repos
+    transition: color 0.2s ease, transform 0.2s ease;
+    text-decoration: none !important;
+  }
+
+  // Effet au survol (hover)
+  a:hover, i:hover {
+    color: #38bdf8 !important; // Cyan élégant
+    transform: translateY(-2px);
+  }
+}

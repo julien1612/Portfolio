@@ -592,7 +592,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
         yield "
                                 ";
         // line 268
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 268, $this->source); })()), "name", [], "any", false, false, false, 268), 'widget', ["attr" => ["class" => "form-control custom-input", "placeholder" => "Ex: Jean Dupont"]]);
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 268, $this->source); })()), "name", [], "any", false, false, false, 268), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
         yield "
                                 <div class=\"text-danger small mt-1\">";
         // line 269
@@ -607,7 +607,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
         yield "
                                 ";
         // line 274
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 274, $this->source); })()), "email", [], "any", false, false, false, 274), 'widget', ["attr" => ["class" => "form-control custom-input", "placeholder" => "nom@exemple.fr"]]);
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 274, $this->source); })()), "email", [], "any", false, false, false, 274), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
         yield "
                                 <div class=\"text-danger small mt-1\">";
         // line 275
@@ -625,7 +625,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
         yield "
                             ";
         // line 282
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 282, $this->source); })()), "subject", [], "any", false, false, false, 282), 'widget', ["attr" => ["class" => "form-control custom-input", "placeholder" => "Ex: Demande de devis / Alternance"]]);
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 282, $this->source); })()), "subject", [], "any", false, false, false, 282), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
         yield "
                             <div class=\"text-danger small mt-1\">";
         // line 283
@@ -642,7 +642,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
         yield "
                             ";
         // line 289
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 289, $this->source); })()), "message", [], "any", false, false, false, 289), 'widget', ["attr" => ["class" => "form-control custom-input", "rows" => "5", "placeholder" => "Détaillez votre besoin..."]]);
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 289, $this->source); })()), "message", [], "any", false, false, false, 289), 'widget', ["attr" => ["class" => "form-control custom-input", "rows" => "5"]]);
         yield "
                             <div class=\"text-danger small mt-1\">";
         // line 290
@@ -996,13 +996,13 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
                         <div class=\"row\">
                             <div class=\"col-md-6 mb-3\">
                                 {{ form_label(contactForm.name, 'Nom / Entreprise', {'label_attr': {'class': 'form-label text-light fw-semibold'}}) }}
-                                {{ form_widget(contactForm.name, {'attr': {'class': 'form-control custom-input', 'placeholder': 'Ex: Jean Dupont'}}) }}
+                                {{ form_widget(contactForm.name, {'attr': {'class': 'form-control custom-input'}}) }}
                                 <div class=\"text-danger small mt-1\">{{ form_errors(contactForm.name) }}</div>
                             </div>
 
                             <div class=\"col-md-6 mb-3\">
                                 {{ form_label(contactForm.email, 'Adresse e-mail', {'label_attr': {'class': 'form-label text-light fw-semibold'}}) }}
-                                {{ form_widget(contactForm.email, {'attr': {'class': 'form-control custom-input', 'placeholder': 'nom@exemple.fr'}}) }}
+                                {{ form_widget(contactForm.email, {'attr': {'class': 'form-control custom-input'}}) }}
                                 <div class=\"text-danger small mt-1\">{{ form_errors(contactForm.email) }}</div>
                             </div>
                         </div>
@@ -1010,14 +1010,14 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
                         {# Sujet #}
                         <div class=\"mb-3\">
                             {{ form_label(contactForm.subject, 'Sujet', {'label_attr': {'class': 'form-label text-light fw-semibold'}}) }}
-                            {{ form_widget(contactForm.subject, {'attr': {'class': 'form-control custom-input', 'placeholder': 'Ex: Demande de devis / Alternance'}}) }}
+                            {{ form_widget(contactForm.subject, {'attr': {'class': 'form-control custom-input'}}) }}
                             <div class=\"text-danger small mt-1\">{{ form_errors(contactForm.subject) }}</div>
                         </div>
 
                         {# Message #}
                         <div class=\"mb-4\">
                             {{ form_label(contactForm.message, 'Votre message', {'label_attr': {'class': 'form-label text-light fw-semibold'}}) }}
-                            {{ form_widget(contactForm.message, {'attr': {'class': 'form-control custom-input', 'rows': '5', 'placeholder': 'Détaillez votre besoin...'}}) }}
+                            {{ form_widget(contactForm.message, {'attr': {'class': 'form-control custom-input', 'rows': '5'}}) }}
                             <div class=\"text-danger small mt-1\">{{ form_errors(contactForm.message) }}</div>
                         </div>
 

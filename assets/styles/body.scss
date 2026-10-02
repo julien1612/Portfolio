@@ -148,17 +148,13 @@ $bg-dark: #0b132b;
   padding-bottom: 5rem;
 }
 
+// Option la plus simple : ajouter #contact dans la liste !
 #about,
-#projets {
+#projets,
+#contact {
   background-color: #0b132b;
   position: relative;
   overflow: hidden;
-
-  #contact {
-  scroll-margin-top: 80px;
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-}
 
   // Trame de points
   background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
@@ -196,6 +192,13 @@ $bg-dark: #0b132b;
     position: relative;
     z-index: 1;
   }
+}
+
+// Règle spécifique pour le décalage de la navbar sur #contact
+#contact {
+  scroll-margin-top: 80px;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
 }
 
 /* Style des conteneurs d'images projets */
