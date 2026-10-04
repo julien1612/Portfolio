@@ -73,7 +73,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Accueil - Développeur Full Stack";
+        yield "Accueil - Développeur PHP / Symfony";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -98,7 +98,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
 
         // line 6
         yield "
-    <!-- HERO CAROUSEL -->
+    <!-- HERO CAROUSEL (la vague est découpée en CSS via mask) -->
     <div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade custom-hero-carousel\" data-bs-ride=\"carousel\">
         <div class=\"carousel-inner\">
 
@@ -109,7 +109,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         // line 14
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/img_1.jpg"), "html", null, true);
         yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 1\">
-                <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <div class=\"carousel-caption\">
                     <h2 class=\"fw-bold text-uppercase\">Web Design</h2>
                     <p>Conception graphique & interfaces modernes</p>
                 </div>
@@ -122,7 +122,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         // line 24
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/img_4.jpg"), "html", null, true);
         yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 2\">
-                <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <div class=\"carousel-caption\">
                     <h2 class=\"fw-bold text-uppercase\">Développement web</h2>
                     <p>Création d'applications web performantes avec PHP & Symfony</p>
                 </div>
@@ -135,19 +135,12 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         // line 34
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/img_3.jpg"), "html", null, true);
         yield "\" class=\"d-block w-100 hero-img\" alt=\"Slide 3\">
-                <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <div class=\"carousel-caption\">
                     <h2 class=\"fw-bold text-uppercase\">Solutions Sur Mesure</h2>
                     <p>Sites vitrines, applications et outils métier</p>
                 </div>
             </div>
 
-        </div>
-
-        <!-- VAGUE DE TRANSITION -->
-        <div class=\"custom-shape-divider-bottom\">
-            <svg data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 1200 120\" preserveaspectratio=\"none\">
-                <path d=\"M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.92,126.31,121.72,188,111.92,233.15,104.7,276.81,81.42,321.39,56.44Z\" fill=\"currentColor\"></path>
-            </svg>
         </div>
 
         <!-- BOUTONS PREV / NEXT -->
@@ -185,7 +178,7 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                     <!-- BOUTONS D'ACTION -->
                     <div class=\"d-flex gap-3 mt-4\">
                         <a href=\"";
-        // line 84
+        // line 77
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/CV_CHASSIN_Julien.pdf"), "html", null, true);
         yield "\" download class=\"btn btn-outline-light btn-lg rounded-pill px-4\">Télécharger mon CV</a>
                     </div>
@@ -224,11 +217,11 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         <div class=\"container py-4\">
             <h2 class=\"text-center mb-5 fw-bold text-white\" data-aos=\"fade-up\">Mes Réalisations</h2>
 
-            <div class=\"row g-4\">
+            <div class=\"row g-4 justify-content-center\">
                 ";
-        // line 122
+        // line 115
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 122, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 115, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -244,52 +237,52 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
-            // line 123
+            // line 116
             yield "                    <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 123) * 100), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 116) * 100), "html", null, true);
             yield "\">
                         <div class=\"card custom-card h-100 overflow-hidden d-flex flex-column\">
-                            
+
                             ";
-            // line 126
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 126)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 127
+            // line 119
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 119)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 120
                 yield "                                <div class=\"project-img-wrapper\">
                                     <img src=\"";
-                // line 128
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 128))), "html", null, true);
+                // line 121
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 121))), "html", null, true);
                 yield "\" class=\"card-img-top project-img\" alt=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 128), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 121), "html", null, true);
                 yield "\">
                                 </div>
                             ";
             }
-            // line 131
+            // line 124
             yield "
                             <div class=\"card-body d-flex flex-column p-4\">
                                 <h3 class=\"card-title h4 text-white fw-bold mb-2\">";
-            // line 133
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 133), "html", null, true);
+            // line 126
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 126), "html", null, true);
             yield "</h3>
-                                
+
                                 <p class=\"card-text text-light opacity-75 fs-6 mb-3 flex-grow-1\">
                                     ";
-            // line 136
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "shortDescription", [], "any", false, false, false, 136), "html", null, true);
+            // line 129
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "shortDescription", [], "any", false, false, false, 129), "html", null, true);
             yield "
                                 </p>
 
                                 ";
-            // line 139
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 139)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 140
+            // line 132
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 132)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 133
                 yield "                                    <div class=\"mb-3 d-flex flex-wrap gap-1\">
                                         ";
-                // line 141
+                // line 134
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 141));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 134));
                 foreach ($context['_seq'] as $context["_key"] => $context["tech"]) {
-                    // line 142
+                    // line 135
                     yield "                                            <span class=\"badge bg-dark border border-secondary text-light\">";
                     yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["tech"], "html", null, true);
                     yield "</span>
@@ -298,15 +291,15 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['tech'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 144
+                // line 137
                 yield "                                    </div>
                                 ";
             }
-            // line 146
+            // line 139
             yield "
                                 <button type=\"button\" class=\"btn btn-outline-primary btn-sm rounded-pill mt-auto align-self-start px-3\" data-bs-toggle=\"modal\" data-bs-target=\"#modalProject";
-            // line 147
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 147), "html", null, true);
+            // line 140
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 140), "html", null, true);
             yield "\">
                                     Voir le projet
                                 </button>
@@ -324,9 +317,9 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                 $context['loop']['last'] = 0 === $context['loop']['revindex0'];
             }
         }
-        // line 153
+        // line 146
         if (!$context['_iterated']) {
-            // line 154
+            // line 147
             yield "                    <div class=\"col-12 text-center text-light opacity-75\">
                         <p class=\"fs-5\">Aucune réalisation publiée pour le moment.</p>
                     </div>
@@ -335,46 +328,45 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['project'], $context['_parent'], $context['_iterated'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 158
+        // line 151
         yield "            </div>
         </div>
     </section>
 
     <!-- MODAUX POPUP PROJETS DYNAMIQUES -->
     ";
-        // line 163
+        // line 156
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 163, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["projects"]) || array_key_exists("projects", $context) ? $context["projects"] : (function () { throw new RuntimeError('Variable "projects" does not exist.', 156, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["project"]) {
-            // line 164
+            // line 157
             yield "        <div class=\"modal fade\" id=\"modalProject";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 164), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 157), "html", null, true);
             yield "\" tabindex=\"-1\" aria-hidden=\"true\">
             <div class=\"modal-dialog modal-xl modal-dialog-centered\">
                 <div class=\"modal-content bg-dark text-white border-secondary\">
-                    
+
                     <div class=\"modal-header border-secondary\">
                         <h5 class=\"modal-title fw-bold\">";
-            // line 169
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 169), "html", null, true);
+            // line 162
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 162), "html", null, true);
             yield "</h5>
                         <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"modal\" aria-label=\"Fermer\"></button>
                     </div>
 
                     <div class=\"modal-body p-4\">
                         ";
-            // line 175
-            yield "                        ";
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", true, true, false, 175) &&  !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 175)))) {
-                // line 176
+            // line 167
+            if ((CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", true, true, false, 167) &&  !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 167)))) {
+                // line 168
                 yield "                            <div id=\"carouselProject";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 176), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 168), "html", null, true);
                 yield "\" class=\"carousel slide mb-4\" data-bs-ride=\"carousel\">
                                 <div class=\"carousel-inner rounded shadow-lg\">
                                     ";
-                // line 178
+                // line 170
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 178));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 170));
                 $context['loop'] = [
                   'parent' => $context['_parent'],
                   'index0' => 0,
@@ -389,19 +381,19 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                     $context['loop']['last'] = 1 === $length;
                 }
                 foreach ($context['_seq'] as $context["_key"] => $context["img"]) {
-                    // line 179
+                    // line 171
                     yield "                                        <div class=\"carousel-item ";
-                    if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 179)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                    if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 171)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
                         yield "active";
                     }
                     yield "\">
                                             <img src=\"";
-                    // line 180
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["img"], "imageName", [], "any", false, false, false, 180))), "html", null, true);
+                    // line 172
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["img"], "imageName", [], "any", false, false, false, 172))), "html", null, true);
                     yield "\" class=\"d-block w-100\" alt=\"";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 180), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 172), "html", null, true);
                     yield " capture ";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 180), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 172), "html", null, true);
                     yield "\">
                                         </div>
                                     ";
@@ -417,61 +409,61 @@ class __TwigTemplate_e9c1c7d6a2d1746a5fcb47a5ab8a58dc extends Template
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['img'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 183
+                // line 175
                 yield "                                </div>
                                 ";
-                // line 184
-                if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 184)) > 1)) {
-                    // line 185
+                // line 176
+                if ((Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["project"], "images", [], "any", false, false, false, 176)) > 1)) {
+                    // line 177
                     yield "                                    <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselProject";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 185), "html", null, true);
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 177), "html", null, true);
                     yield "\" data-bs-slide=\"prev\">
                                         <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
                                     </button>
                                     <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#carouselProject";
-                    // line 188
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 188), "html", null, true);
+                    // line 180
+                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 180), "html", null, true);
                     yield "\" data-bs-slide=\"next\">
                                         <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
                                     </button>
                                 ";
                 }
-                // line 192
+                // line 184
                 yield "                            </div>
                         ";
-            } elseif ((($tmp = CoreExtension::getAttribute($this->env, $this->source,             // line 193
-$context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 194
+            } elseif ((($tmp = CoreExtension::getAttribute($this->env, $this->source,             // line 185
+$context["project"], "coverImage", [], "any", false, false, false, 185)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 186
                 yield "                            <div class=\"text-center mb-4\">
                                 <img src=\"";
-                // line 195
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 195))), "html", null, true);
+                // line 187
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("pictures/" . CoreExtension::getAttribute($this->env, $this->source, $context["project"], "coverImage", [], "any", false, false, false, 187))), "html", null, true);
                 yield "\" class=\"img-fluid rounded shadow-lg\" style=\"max-height: 400px;\" alt=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 195), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "title", [], "any", false, false, false, 187), "html", null, true);
                 yield "\">
                             </div>
                         ";
             }
-            // line 198
+            // line 190
             yield "
                         <div class=\"lead text-light opacity-90 mb-4\">
                             ";
-            // line 200
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["project"], "fullDescription", [], "any", false, false, false, 200);
+            // line 192
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["project"], "fullDescription", [], "any", false, false, false, 192);
             yield "
                         </div>
 
                         ";
-            // line 203
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 203)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 204
+            // line 195
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 195)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 196
                 yield "                            <div class=\"d-flex flex-wrap gap-2 mb-3\">
                                 ";
-                // line 205
+                // line 197
                 $context['_parent'] = $context;
-                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 205));
+                $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "technologies", [], "any", false, false, false, 197));
                 foreach ($context['_seq'] as $context["_key"] => $context["tech"]) {
-                    // line 206
+                    // line 198
                     yield "                                    <span class=\"badge bg-primary\">";
                     yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["tech"], "html", null, true);
                     yield "</span>
@@ -480,38 +472,38 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_key'], $context['tech'], $context['_parent']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 208
+                // line 200
                 yield "                            </div>
                         ";
             }
-            // line 210
+            // line 202
             yield "                    </div>
 
                     <div class=\"modal-footer border-secondary justify-content-between\">
                         <div>
                             ";
-            // line 214
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 214)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 215
+            // line 206
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 206)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 207
                 yield "                                <a href=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 215), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "githubUrl", [], "any", false, false, false, 207), "html", null, true);
                 yield "\" target=\"_blank\" class=\"btn btn-outline-light rounded-pill me-2\">
                                     <i class=\"bi bi-github me-2\"></i>Voir sur GitHub
                                 </a>
                             ";
             }
-            // line 219
+            // line 211
             yield "                            ";
-            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 219)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-                // line 220
+            if ((($tmp = CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 211)) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+                // line 212
                 yield "                                <a href=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 220), "html", null, true);
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "websiteUrl", [], "any", false, false, false, 212), "html", null, true);
                 yield "\" target=\"_blank\" class=\"btn btn-outline-info rounded-pill\">
                                     <i class=\"bi bi-globe me-2\"></i>Visiter le site
                                 </a>
                             ";
             }
-            // line 224
+            // line 216
             yield "                        </div>
                         <button type=\"button\" class=\"btn btn-secondary rounded-pill\" data-bs-dismiss=\"modal\">Fermer</button>
                     </div>
@@ -524,175 +516,166 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['project'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 232
+        // line 224
         yield "
     <!-- SECTION CONTACT -->
     <section id=\"contact\" class=\"py-5 text-white\">
-    <div class=\"container\">
-        <h2 class=\"text-center mb-2 fw-bold\">Me contacter</h2>
-        <p class=\"text-center text-white-50 mb-5 \">
-            Vous avez un projet Symfony, un besoin en sous-traitance ou une maintenance ? Écrivez-moi !
-        </p>
+        <div class=\"container\">
+            <h2 class=\"text-center mb-2 fw-bold\">Me contacter</h2>
+            <p class=\"text-center text-white-50 mb-5\">
+                Vous avez un projet Symfony, un besoin en sous-traitance ou une maintenance ? Écrivez-moi !
+            </p>
 
-        <div class=\"row justify-content-center\">
-            <div class=\"col-md-10 col-lg-8\">
+            <div class=\"row justify-content-center\">
+                <div class=\"col-md-10 col-lg-8\">
 
-                ";
-        // line 245
-        yield "                ";
+                    ";
+        // line 237
+        yield "                    ";
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 245, $this->source); })()), "flashes", ["success"], "method", false, false, false, 245));
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 237, $this->source); })()), "flashes", ["success"], "method", false, false, false, 237));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 246
-            yield "                    <div class=\"alert alert-success alert-dismissible fade show d-flex align-items-center mb-4\" role=\"alert\">
-                        <i class=\"bi bi-check-circle-fill me-2 fs-5\"></i>
-                        <div>";
-            // line 248
+            // line 238
+            yield "                        <div class=\"alert alert-success alert-dismissible fade show d-flex align-items-center mb-4\" role=\"alert\">
+                            <i class=\"bi bi-check-circle-fill me-2 fs-5\"></i>
+                            <div>";
+            // line 240
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["message"], "html", null, true);
             yield "</div>
-                        <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
-                    </div>
-                ";
+                            <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
+                        </div>
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['message'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 252
+        // line 244
         yield "
-                ";
-        // line 254
-        yield "                <div class=\"card custom-card p-4 p-md-5\">
                     ";
-        // line 255
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 255, $this->source); })()), 'form_start', ["attr" => ["class" => "needs-validation"]]);
+        // line 246
+        yield "                    <div class=\"card custom-card p-4 p-md-5\">
+                        ";
+        // line 247
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 247, $this->source); })()), 'form_start', ["attr" => ["class" => "needs-validation"]]);
         yield "
 
                         ";
-        // line 258
-        yield "                        ";
-        if ((($tmp = $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 258, $this->source); })()), 'errors')) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
-            // line 259
+        // line 249
+        if ((($tmp = $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 249, $this->source); })()), 'errors')) && $tmp instanceof Markup ? (string) $tmp : $tmp)) {
+            // line 250
             yield "                            <div class=\"alert alert-danger mb-4\">
                                 ";
-            // line 260
-            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 260, $this->source); })()), 'errors');
+            // line 251
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 251, $this->source); })()), 'errors');
             yield "
                             </div>
                         ";
         }
+        // line 254
+        yield "
+                        <div class=\"row\">
+                            <div class=\"col-md-6 mb-3\">
+                                ";
+        // line 257
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 257, $this->source); })()), "name", [], "any", false, false, false, 257), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Nom / Entreprise"]);
+        yield "
+                                ";
+        // line 258
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 258, $this->source); })()), "name", [], "any", false, false, false, 258), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
+        yield "
+                                <div class=\"text-danger small mt-1\">";
+        // line 259
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 259, $this->source); })()), "name", [], "any", false, false, false, 259), 'errors');
+        yield "</div>
+                            </div>
+
+                            <div class=\"col-md-6 mb-3\">
+                                ";
         // line 263
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 263, $this->source); })()), "email", [], "any", false, false, false, 263), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Adresse e-mail"]);
         yield "
-                        ";
+                                ";
+        // line 264
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 264, $this->source); })()), "email", [], "any", false, false, false, 264), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
+        yield "
+                                <div class=\"text-danger small mt-1\">";
         // line 265
-        yield "                        <div class=\"row\">
-                            <div class=\"col-md-6 mb-3\">
-                                ";
-        // line 267
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 267, $this->source); })()), "name", [], "any", false, false, false, 267), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Nom / Entreprise"]);
-        yield "
-                                ";
-        // line 268
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 268, $this->source); })()), "name", [], "any", false, false, false, 268), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
-        yield "
-                                <div class=\"text-danger small mt-1\">";
-        // line 269
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 269, $this->source); })()), "name", [], "any", false, false, false, 269), 'errors');
-        yield "</div>
-                            </div>
-
-                            <div class=\"col-md-6 mb-3\">
-                                ";
-        // line 273
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 273, $this->source); })()), "email", [], "any", false, false, false, 273), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Adresse e-mail"]);
-        yield "
-                                ";
-        // line 274
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 274, $this->source); })()), "email", [], "any", false, false, false, 274), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
-        yield "
-                                <div class=\"text-danger small mt-1\">";
-        // line 275
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 275, $this->source); })()), "email", [], "any", false, false, false, 275), 'errors');
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 265, $this->source); })()), "email", [], "any", false, false, false, 265), 'errors');
         yield "</div>
                             </div>
                         </div>
 
-                        ";
-        // line 280
-        yield "                        <div class=\"mb-3\">
+                        <div class=\"mb-3\">
                             ";
-        // line 281
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 281, $this->source); })()), "subject", [], "any", false, false, false, 281), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Sujet"]);
+        // line 270
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 270, $this->source); })()), "subject", [], "any", false, false, false, 270), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Sujet"]);
         yield "
                             ";
-        // line 282
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 282, $this->source); })()), "subject", [], "any", false, false, false, 282), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
+        // line 271
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 271, $this->source); })()), "subject", [], "any", false, false, false, 271), 'widget', ["attr" => ["class" => "form-control custom-input"]]);
         yield "
                             <div class=\"text-danger small mt-1\">";
-        // line 283
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 283, $this->source); })()), "subject", [], "any", false, false, false, 283), 'errors');
+        // line 272
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 272, $this->source); })()), "subject", [], "any", false, false, false, 272), 'errors');
         yield "</div>
                         </div>
 
-                        ";
-        // line 287
-        yield "                        <div class=\"mb-4\">
+                        <div class=\"mb-4\">
                             ";
-        // line 288
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 288, $this->source); })()), "message", [], "any", false, false, false, 288), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Votre message"]);
+        // line 276
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 276, $this->source); })()), "message", [], "any", false, false, false, 276), 'label', ["label_attr" => ["class" => "form-label text-light fw-semibold"], "label" => "Votre message"]);
         yield "
                             ";
-        // line 289
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 289, $this->source); })()), "message", [], "any", false, false, false, 289), 'widget', ["attr" => ["class" => "form-control custom-input", "rows" => "5"]]);
+        // line 277
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 277, $this->source); })()), "message", [], "any", false, false, false, 277), 'widget', ["attr" => ["class" => "form-control custom-input", "rows" => "5"]]);
         yield "
                             <div class=\"text-danger small mt-1\">";
-        // line 290
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 290, $this->source); })()), "message", [], "any", false, false, false, 290), 'errors');
+        // line 278
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 278, $this->source); })()), "message", [], "any", false, false, false, 278), 'errors');
         yield "</div>
                         </div>
 
-                        ";
-        // line 294
-        yield "                        <div class=\"form-privacy-note mb-4 p-3 rounded\">
+                        <div class=\"form-privacy-note mb-4 p-3 rounded\">
                             <div class=\"d-flex align-items-start gap-2\">
-                                <i class=\"bi bi-shield-lock-fill text-info fs-5 mt-n1\"></i>
-                                <span class=\"small text-muted\">
+                                <i class=\"bi bi-shield-lock-fill text-info fs-5\"></i>
+                                <span class=\"small\">
                                     En soumettant ce formulaire, vous acceptez que les données saisies soient transmises directement à ma boîte e-mail dans le cadre de notre relation professionnelle. Vos données ne sont ni revendues, ni conservées en base de données.
                                 </span>
                             </div>
                         </div>
 
                         ";
-        // line 304
-        yield "                        <div class=\"d-grid\">
+        // line 291
+        yield "                        <div class=\"d-flex justify-content-center\">
                             ";
-        // line 305
-        if (CoreExtension::getAttribute($this->env, $this->source, ($context["contactForm"] ?? null), "submit", [], "any", true, true, false, 305)) {
-            // line 306
+        // line 292
+        if (CoreExtension::getAttribute($this->env, $this->source, ($context["contactForm"] ?? null), "submit", [], "any", true, true, false, 292)) {
+            // line 293
             yield "                                ";
-            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 306, $this->source); })()), "submit", [], "any", false, false, false, 306), 'widget', ["attr" => ["class" => "btn btn-primary btn-lg custom-submit-btn"]]);
+            yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 293, $this->source); })()), "submit", [], "any", false, false, false, 293), 'widget', ["attr" => ["class" => "btn btn-primary btn-lg custom-submit-btn"]]);
             yield "
                             ";
         } else {
-            // line 308
+            // line 295
             yield "                                <button type=\"submit\" class=\"btn btn-primary btn-lg custom-submit-btn\">
                                     <span>Envoyer le message</span>
                                     <i class=\"bi bi-send-fill ms-2\"></i>
                                 </button>
                             ";
         }
-        // line 313
+        // line 300
         yield "                        </div>
 
-                    ";
-        // line 315
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 315, $this->source); })()), 'form_end');
+                        ";
+        // line 302
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 302, $this->source); })()), 'form_end');
         yield "
-                </div>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -724,18 +707,18 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
      */
     public function getDebugInfo(): array
     {
-        return array (  688 => 315,  684 => 313,  677 => 308,  671 => 306,  669 => 305,  666 => 304,  655 => 294,  649 => 290,  645 => 289,  641 => 288,  638 => 287,  632 => 283,  628 => 282,  624 => 281,  621 => 280,  614 => 275,  610 => 274,  606 => 273,  599 => 269,  595 => 268,  591 => 267,  587 => 265,  584 => 263,  578 => 260,  575 => 259,  572 => 258,  567 => 255,  564 => 254,  561 => 252,  551 => 248,  547 => 246,  542 => 245,  528 => 232,  515 => 224,  507 => 220,  504 => 219,  496 => 215,  494 => 214,  488 => 210,  484 => 208,  475 => 206,  471 => 205,  468 => 204,  466 => 203,  460 => 200,  456 => 198,  448 => 195,  445 => 194,  443 => 193,  440 => 192,  433 => 188,  426 => 185,  424 => 184,  421 => 183,  400 => 180,  393 => 179,  376 => 178,  370 => 176,  367 => 175,  359 => 169,  350 => 164,  346 => 163,  339 => 158,  330 => 154,  328 => 153,  309 => 147,  306 => 146,  302 => 144,  293 => 142,  289 => 141,  286 => 140,  284 => 139,  278 => 136,  272 => 133,  268 => 131,  260 => 128,  257 => 127,  255 => 126,  248 => 123,  230 => 122,  189 => 84,  136 => 34,  123 => 24,  110 => 14,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  671 => 302,  667 => 300,  660 => 295,  654 => 293,  652 => 292,  649 => 291,  634 => 278,  630 => 277,  626 => 276,  619 => 272,  615 => 271,  611 => 270,  603 => 265,  599 => 264,  595 => 263,  588 => 259,  584 => 258,  580 => 257,  575 => 254,  569 => 251,  566 => 250,  564 => 249,  559 => 247,  556 => 246,  553 => 244,  543 => 240,  539 => 238,  534 => 237,  520 => 224,  507 => 216,  499 => 212,  496 => 211,  488 => 207,  486 => 206,  480 => 202,  476 => 200,  467 => 198,  463 => 197,  460 => 196,  458 => 195,  452 => 192,  448 => 190,  440 => 187,  437 => 186,  435 => 185,  432 => 184,  425 => 180,  418 => 177,  416 => 176,  413 => 175,  392 => 172,  385 => 171,  368 => 170,  362 => 168,  360 => 167,  352 => 162,  343 => 157,  339 => 156,  332 => 151,  323 => 147,  321 => 146,  302 => 140,  299 => 139,  295 => 137,  286 => 135,  282 => 134,  279 => 133,  277 => 132,  271 => 129,  265 => 126,  261 => 124,  253 => 121,  250 => 120,  248 => 119,  241 => 116,  223 => 115,  182 => 77,  136 => 34,  123 => 24,  110 => 14,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Accueil - Développeur Full Stack{% endblock %}
+{% block title %}Accueil - Développeur PHP / Symfony{% endblock %}
 
 {% block body %}
 
-    <!-- HERO CAROUSEL -->
+    <!-- HERO CAROUSEL (la vague est découpée en CSS via mask) -->
     <div id=\"carouselExampleFade\" class=\"carousel slide carousel-fade custom-hero-carousel\" data-bs-ride=\"carousel\">
         <div class=\"carousel-inner\">
 
@@ -743,7 +726,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
             <div class=\"carousel-item active\">
                 <div class=\"carousel-overlay\"></div>
                 <img src=\"{{ asset('pictures/img_1.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 1\">
-                <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <div class=\"carousel-caption\">
                     <h2 class=\"fw-bold text-uppercase\">Web Design</h2>
                     <p>Conception graphique & interfaces modernes</p>
                 </div>
@@ -753,7 +736,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
             <div class=\"carousel-item\">
                 <div class=\"carousel-overlay\"></div>
                 <img src=\"{{ asset('pictures/img_4.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 2\">
-                <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <div class=\"carousel-caption\">
                     <h2 class=\"fw-bold text-uppercase\">Développement web</h2>
                     <p>Création d'applications web performantes avec PHP & Symfony</p>
                 </div>
@@ -763,19 +746,12 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
             <div class=\"carousel-item\">
                 <div class=\"carousel-overlay\"></div>
                 <img src=\"{{ asset('pictures/img_3.jpg') }}\" class=\"d-block w-100 hero-img\" alt=\"Slide 3\">
-                <div class=\"carousel-caption d-flex flex-column align-items-center justify-content-start justify-content-md-center h-100\">
+                <div class=\"carousel-caption\">
                     <h2 class=\"fw-bold text-uppercase\">Solutions Sur Mesure</h2>
                     <p>Sites vitrines, applications et outils métier</p>
                 </div>
             </div>
 
-        </div>
-
-        <!-- VAGUE DE TRANSITION -->
-        <div class=\"custom-shape-divider-bottom\">
-            <svg data-name=\"Layer 1\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 1200 120\" preserveaspectratio=\"none\">
-                <path d=\"M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.92,126.31,121.72,188,111.92,233.15,104.7,276.81,81.42,321.39,56.44Z\" fill=\"currentColor\"></path>
-            </svg>
         </div>
 
         <!-- BOUTONS PREV / NEXT -->
@@ -849,11 +825,11 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
         <div class=\"container py-4\">
             <h2 class=\"text-center mb-5 fw-bold text-white\" data-aos=\"fade-up\">Mes Réalisations</h2>
 
-            <div class=\"row g-4\">
+            <div class=\"row g-4 justify-content-center\">
                 {% for project in projects %}
                     <div class=\"col-lg-4 col-md-6\" data-aos=\"fade-up\" data-aos-delay=\"{{ loop.index * 100 }}\">
                         <div class=\"card custom-card h-100 overflow-hidden d-flex flex-column\">
-                            
+
                             {% if project.coverImage %}
                                 <div class=\"project-img-wrapper\">
                                     <img src=\"{{ asset('pictures/' ~ project.coverImage) }}\" class=\"card-img-top project-img\" alt=\"{{ project.title }}\">
@@ -862,7 +838,7 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
 
                             <div class=\"card-body d-flex flex-column p-4\">
                                 <h3 class=\"card-title h4 text-white fw-bold mb-2\">{{ project.title }}</h3>
-                                
+
                                 <p class=\"card-text text-light opacity-75 fs-6 mb-3 flex-grow-1\">
                                     {{ project.shortDescription }}
                                 </p>
@@ -895,14 +871,13 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
         <div class=\"modal fade\" id=\"modalProject{{ project.id }}\" tabindex=\"-1\" aria-hidden=\"true\">
             <div class=\"modal-dialog modal-xl modal-dialog-centered\">
                 <div class=\"modal-content bg-dark text-white border-secondary\">
-                    
+
                     <div class=\"modal-header border-secondary\">
                         <h5 class=\"modal-title fw-bold\">{{ project.title }}</h5>
                         <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"modal\" aria-label=\"Fermer\"></button>
                     </div>
 
                     <div class=\"modal-body p-4\">
-                        {# Galerie Carousel d'images complémentaires #}
                         {% if project.images is defined and project.images is not empty %}
                             <div id=\"carouselProject{{ project.id }}\" class=\"carousel slide mb-4\" data-bs-ride=\"carousel\">
                                 <div class=\"carousel-inner rounded shadow-lg\">
@@ -963,36 +938,34 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
 
     <!-- SECTION CONTACT -->
     <section id=\"contact\" class=\"py-5 text-white\">
-    <div class=\"container\">
-        <h2 class=\"text-center mb-2 fw-bold\">Me contacter</h2>
-        <p class=\"text-center text-white-50 mb-5 \">
-            Vous avez un projet Symfony, un besoin en sous-traitance ou une maintenance ? Écrivez-moi !
-        </p>
+        <div class=\"container\">
+            <h2 class=\"text-center mb-2 fw-bold\">Me contacter</h2>
+            <p class=\"text-center text-white-50 mb-5\">
+                Vous avez un projet Symfony, un besoin en sous-traitance ou une maintenance ? Écrivez-moi !
+            </p>
 
-        <div class=\"row justify-content-center\">
-            <div class=\"col-md-10 col-lg-8\">
+            <div class=\"row justify-content-center\">
+                <div class=\"col-md-10 col-lg-8\">
 
-                {# Affichage des messages de confirmation #}
-                {% for message in app.flashes('success') %}
-                    <div class=\"alert alert-success alert-dismissible fade show d-flex align-items-center mb-4\" role=\"alert\">
-                        <i class=\"bi bi-check-circle-fill me-2 fs-5\"></i>
-                        <div>{{ message }}</div>
-                        <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
-                    </div>
-                {% endfor %}
+                    {# Messages Flash #}
+                    {% for message in app.flashes('success') %}
+                        <div class=\"alert alert-success alert-dismissible fade show d-flex align-items-center mb-4\" role=\"alert\">
+                            <i class=\"bi bi-check-circle-fill me-2 fs-5\"></i>
+                            <div>{{ message }}</div>
+                            <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>
+                        </div>
+                    {% endfor %}
 
-                {# Card du formulaire #}
-                <div class=\"card custom-card p-4 p-md-5\">
-                    {{ form_start(contactForm, {'attr': {'class': 'needs-validation'}}) }}
+                    {# Card du formulaire #}
+                    <div class=\"card custom-card p-4 p-md-5\">
+                        {{ form_start(contactForm, {'attr': {'class': 'needs-validation'}}) }}
 
-                        {# Erreurs globales du formulaire #}
                         {% if form_errors(contactForm) %}
                             <div class=\"alert alert-danger mb-4\">
                                 {{ form_errors(contactForm) }}
                             </div>
                         {% endif %}
 
-                        {# Ligne 1 : Nom + Email côte à côte sur PC #}
                         <div class=\"row\">
                             <div class=\"col-md-6 mb-3\">
                                 {{ form_label(contactForm.name, 'Nom / Entreprise', {'label_attr': {'class': 'form-label text-light fw-semibold'}}) }}
@@ -1007,32 +980,29 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
                             </div>
                         </div>
 
-                        {# Sujet #}
                         <div class=\"mb-3\">
                             {{ form_label(contactForm.subject, 'Sujet', {'label_attr': {'class': 'form-label text-light fw-semibold'}}) }}
                             {{ form_widget(contactForm.subject, {'attr': {'class': 'form-control custom-input'}}) }}
                             <div class=\"text-danger small mt-1\">{{ form_errors(contactForm.subject) }}</div>
                         </div>
 
-                        {# Message #}
                         <div class=\"mb-4\">
                             {{ form_label(contactForm.message, 'Votre message', {'label_attr': {'class': 'form-label text-light fw-semibold'}}) }}
                             {{ form_widget(contactForm.message, {'attr': {'class': 'form-control custom-input', 'rows': '5'}}) }}
                             <div class=\"text-danger small mt-1\">{{ form_errors(contactForm.message) }}</div>
                         </div>
 
-                        {# Mention Légale & Protection des données #}
                         <div class=\"form-privacy-note mb-4 p-3 rounded\">
                             <div class=\"d-flex align-items-start gap-2\">
-                                <i class=\"bi bi-shield-lock-fill text-info fs-5 mt-n1\"></i>
-                                <span class=\"small text-muted\">
+                                <i class=\"bi bi-shield-lock-fill text-info fs-5\"></i>
+                                <span class=\"small\">
                                     En soumettant ce formulaire, vous acceptez que les données saisies soient transmises directement à ma boîte e-mail dans le cadre de notre relation professionnelle. Vos données ne sont ni revendues, ni conservées en base de données.
                                 </span>
                             </div>
                         </div>
 
-                        {# Bouton d'envoi #}
-                        <div class=\"d-grid\">
+                        {# Bouton centré, largeur plafonnée par le SCSS (max 280px) #}
+                        <div class=\"d-flex justify-content-center\">
                             {% if contactForm.submit is defined %}
                                 {{ form_widget(contactForm.submit, {'attr': {'class': 'btn btn-primary btn-lg custom-submit-btn'}}) }}
                             {% else %}
@@ -1043,13 +1013,13 @@ $context["project"], "coverImage", [], "any", false, false, false, 193)) && $tmp
                             {% endif %}
                         </div>
 
-                    {{ form_end(contactForm) }}
-                </div>
+                        {{ form_end(contactForm) }}
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 {% endblock %}", "home/index.html.twig", "/Users/julienchassin/Documents/Portfolio/templates/home/index.html.twig");
     }
 }
