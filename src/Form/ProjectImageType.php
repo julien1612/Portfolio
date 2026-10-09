@@ -13,10 +13,13 @@ class ProjectImageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder->add('imageFile', VichImageType::class, [
-            'label' => 'Image',
+            'label' => 'Image de la galerie',
             'required' => false,
             'allow_delete' => true,
+            'delete_label' => 'Supprimer cette image',
             'download_uri' => false,
+            'image_uri' => true,
+            'asset_helper' => true,
         ]);
     }
 

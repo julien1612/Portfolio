@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Project;
+use App\Form\ProjectImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
@@ -34,11 +35,18 @@ class ProjectCrudController extends AbstractCrudController
             TextEditorField::new('fullDescription', 'Description complète')
                 ->hideOnIndex(),
             ArrayField::new('technologies', 'Techs'),
-            ImageField::new('coverImage', 'Image')
+            ImageField::new('coverImage', 'Image de couverture')
                 ->setBasePath('/pictures')
-                ->onlyOnIndex(),
+                ->setUploadDir('public/pictures'),
+
+            // CORRECTION DE LA GALERIE :
             CollectionField::new('images', 'Galerie')
+                ->setEntryType(ProjectImageType::class)
+                ->setFormTypeOption('by_reference', false)
+                ->allowAdd()
+                ->allowDelete()
                 ->hideOnIndex(),
+
             UrlField::new('githubUrl', 'GitHub')
                 ->hideOnIndex(),
             UrlField::new('websiteUrl', 'Site Web')
