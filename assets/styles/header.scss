@@ -1,7 +1,7 @@
 .color-nav {
     // Positionnement flottant
     position: absolute;
-    top: 0.75rem; // Réduit sur mobile pour ne pas trop descendre
+    top: 0.75rem;
     left: 50%;
     transform: translateX(-50%);
     width: 94%;
@@ -16,40 +16,55 @@
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
-    padding: 6px 12px; // Moins haut sur mobile
+    padding: 6px 12px;
 
     @media (min-width: 768px) {
-        top: 2rem; // Marge normale sur tablette/desktop
+        top: 2rem;
         border-radius: 16px;
         padding: 12px 30px;
         width: 92%;
     }
-}
 
 .logo-header {
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 30%;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        overflow: visible;
+        object-fit: contain;
 
-    width: 40px;
-    height: 40px;
+        // Échelle augmentée pour un rendu bien plus grand et percutant
+        transform: scale(1.9) !important;
+        transform-origin: center center;
+        
+        // Halo néon permanent et transition fluide
+        filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.4));
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
 
-    @media (min-width: 576px) {
-        width: 55px;
-        height: 55px;
-    }
+        // Dimensions de base augmentées
+        width: 65px !important;
+        height: 65px !important;
 
-    @media (min-width: 768px) {
-        width: 70px;
-        height: 70px;
-    }
+        @media (min-width: 576px) {
+            width: 80px !important;
+            height: 80px !important;
+        }
 
-    @media (min-width: 1200px) {
-        width: 80px;
-        height: 80px;
+        @media (min-width: 768px) {
+            width: 95px !important;
+            height: 95px !important;
+        }
+
+        @media (min-width: 1200px) {
+            width: 115px !important;
+            height: 115px !important;
+        }
+
+        // Effet accentué au survol
+        &:hover {
+            transform: scale(2.1) !important; // Zoom dynamique plus prononcé
+            filter: drop-shadow(0 0 16px rgba(96, 165, 250, 0.95)); // Halo lumineux intense
+        }
     }
 }
 
@@ -99,7 +114,7 @@
 
     &:hover,
     &.active {
-        color: #60a5fa !important; // Bleu clair au survol
+        color: #60a5fa !important;
         text-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
         text-decoration: none;
     }
@@ -118,14 +133,14 @@
     }
 
     .navbar-toggler-icon {
-        filter: brightness(0) invert(1); // Force les barres en blanc
+        filter: brightness(0) invert(1);
     }
 }
 
 /* Menu déroulant sur mobile */
 @media (max-width: 991px) {
     .navbar-collapse {
-        background: rgba(15, 23, 42, 0.9); // Un peu plus opaque pour faciliter la lecture sur smartphone
+        background: rgba(15, 23, 42, 0.9);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.2);

@@ -54,7 +54,7 @@ class __TwigTemplate_2859239f2574cf8ea01b42f736c4ff0d extends Template
         yield "\">
 \t\t\t<img src=\"";
         // line 5
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/photo_moi.PNG"), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("pictures/logo_2.png"), "html", null, true);
         yield "\" alt=\"Julien Chassin\" class=\"logo-header\">
 \t\t\t<div class=\"ms-2 ms-sm-3 text-start\">
 \t\t\t\t<h1 class=\"titleH1 mb-0\">CHASSIN Julien</h1>
@@ -122,7 +122,7 @@ class __TwigTemplate_2859239f2574cf8ea01b42f736c4ff0d extends Template
 \t<div class=\"container d-flex align-items-center justify-content-between px-3\">
 
 \t\t<a class=\"navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none\" href=\"{{ path('app_home') }}\">
-\t\t\t<img src=\"{{ asset('pictures/photo_moi.PNG') }}\" alt=\"Julien Chassin\" class=\"logo-header\">
+\t\t\t<img src=\"{{ asset('pictures/logo_2.png') }}\" alt=\"Julien Chassin\" class=\"logo-header\">
 \t\t\t<div class=\"ms-2 ms-sm-3 text-start\">
 \t\t\t\t<h1 class=\"titleH1 mb-0\">CHASSIN Julien</h1>
 \t\t\t\t<span class=\"subtitle-header d-block\">Développeur PHP / Symfony</span>

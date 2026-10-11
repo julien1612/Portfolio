@@ -8,7 +8,6 @@ $wave-h-mobile: 110px;
 $wave-h-desktop: 100px;
 
 // Hauteur approximative de la navbar flottante (top + hauteur)
-// Sert à centrer légende et flèches dans la zone réellement visible
 $nav-h-mobile: 75px;
 $nav-h-desktop: 130px;
 
@@ -19,7 +18,6 @@ $wave-mask-mobile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/
 $wave-mask-desktop: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath fill-rule='evenodd' d='M0,0H1200V120H0Z M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.92,126.31,121.72,188,111.92,233.15,104.7,276.81,81.42,321.39,56.44Z'/%3E%3C/svg%3E");
 
 // Applique un masque : partie haute pleine + vague en bas (zone transparente)
-// Chevauchement de 2px entre les deux couches pour éviter toute ligne de jonction
 @mixin hero-wave-mask($wave, $h) {
   -webkit-mask-image: linear-gradient(#000, #000), $wave;
   mask-image: linear-gradient(#000, #000), $wave;
@@ -27,11 +25,14 @@ $wave-mask-desktop: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000
   mask-repeat: no-repeat;
   -webkit-mask-position: top, bottom;
   mask-position: top, bottom;
-  -webkit-mask-size: 100% calc(100% - #{$h - 2px}), 100% $h;
-  mask-size: 100% calc(100% - #{$h - 2px}), 100% $h;
+  -webkit-mask-size: 100% calc(100% - #{$h - 2px}),
+  100% $h;
+  mask-size: 100% calc(100% - #{$h - 2px}),
+  100% $h;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -45,145 +46,17 @@ body {
 }
 
 // --------------------------------------------------
-// 2. HEADER FLOTTANT (NAVBAR)
-// --------------------------------------------------
-.color-nav {
-  position: absolute;
-  top: 0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 94%;
-  max-width: 1300px;
-  z-index: 1000;
-
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  padding: 6px 12px;
-
-  @media (min-width: 768px) {
-    top: 2rem;
-    border-radius: 16px;
-    padding: 12px 30px;
-    width: 92%;
-  }
-}
-
-.logo-header {
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center 30%;
-  overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  width: 40px;
-  height: 40px;
-
-  @media (min-width: 576px) {
-    width: 55px;
-    height: 55px;
-  }
-
-  @media (min-width: 768px) {
-    width: 70px;
-    height: 70px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-.titleH1 {
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: left;
-  font-size: 0.9rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-
-  @media (min-width: 576px) {
-    font-size: 1.2rem;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 1.4rem;
-  }
-
-  @media (min-width: 1200px) {
-    font-size: 1.8rem;
-    white-space: nowrap;
-    letter-spacing: 1px;
-  }
-}
-
-.subtitle-header {
-  color: #e2e8f0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-align: left;
-  font-size: 0.7rem;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-
-  @media (min-width: 768px) {
-    font-size: 0.85rem;
-  }
-}
-
-.color-link {
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 500;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-
-  &:hover,
-  &.active {
-    color: #60a5fa;
-    text-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
-    text-decoration: none;
-  }
-}
-
-.navbar-toggler {
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 4px 8px;
-
-  .navbar-toggler-icon {
-    filter: brightness(0) invert(1);
-  }
-}
-
-@media (max-width: 991px) {
-  .navbar-collapse {
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 12px;
-    margin-top: 10px;
-  }
-}
-
-// --------------------------------------------------
 // 3. CARROUSEL HERO (bas découpé en vague via mask)
 // --------------------------------------------------
 #carouselExampleFade,
 .custom-hero-carousel {
   position: relative;
-  // Le hero passe AU-DESSUS de la section suivante : sa découpe en vague
-  // laisse voir le fond (halo) de la section remontée dessous.
   z-index: 2;
   width: 100%;
-  height: 65vh;
-  min-height: 420px;
+
+  // Mobile : hauteur adaptée pour apercevoir légèrement le bas
+  height: 80vh;
+  min-height: 480px;
 
   // La section suivante remonte SOUS la vague
   margin-bottom: -$wave-h-mobile;
@@ -192,50 +65,46 @@ body {
   @include hero-wave-mask($wave-mask-mobile, $wave-h-mobile);
 
   @media (min-width: 768px) {
-    height: 80vh;
-    min-height: 500px;
+    // Desktop / Grand écran : occupe 100% de la hauteur visible + compense la vague
+    height: calc(100vh + #{$wave-h-desktop});
+    min-height: 650px;
     margin-bottom: -$wave-h-desktop;
     @include hero-wave-mask($wave-mask-desktop, $wave-h-desktop);
   }
 
-  // Child combinators : ne touche plus les carrousels des modales
-  > .carousel-inner,
-  > .carousel-inner > .carousel-item {
+  // Child combinators
+  >.carousel-inner,
+  >.carousel-inner>.carousel-item {
     height: 100%;
     width: 100%;
   }
 
-  > .carousel-inner > .carousel-item img {
+  >.carousel-inner>.carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
   }
 
-  // Overlay : plus léger sur mobile pour que l'image respire
+  // Overlay
   .carousel-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.4) 60%,
-      rgba($bg-dark, 0.5) 100%
-    );
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 60%,
+        rgba($bg-dark, 0.5) 100%);
     z-index: 1;
 
     @media (min-width: 768px) {
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.55) 0%,
-        rgba(0, 0, 0, 0.55) 60%,
-        rgba($bg-dark, 0.6) 100%
-      );
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.55) 0%,
+          rgba(0, 0, 0, 0.55) 60%,
+          rgba($bg-dark, 0.6) 100%);
     }
   }
 
-  // Légende : centrée (flex) dans la zone VISIBLE = entre la navbar et la vague,
-  // avec des marges latérales pour laisser la place aux flèches.
+  // Légende
   .carousel-caption {
     z-index: 2;
     position: absolute;
@@ -266,7 +135,7 @@ body {
       line-height: 1.2;
       letter-spacing: 0.5px;
       margin-bottom: 0.5rem;
-      text-wrap: balance; // coupe proprement les titres longs sur 2 lignes
+      text-wrap: balance;
       text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
 
       @media (min-width: 768px) {
@@ -293,7 +162,7 @@ body {
     }
   }
 
-  // Flèches : limitées à la même zone visible => même centre que la légende
+  // Flèches
   .carousel-control-prev,
   .carousel-control-next {
     z-index: 3;
@@ -314,14 +183,10 @@ body {
 // --------------------------------------------------
 // 4. SECTIONS & CARTES
 // --------------------------------------------------
-// #apropos est l'id du <h2> : on ne lui met PAS de padding,
-// seulement une marge de scroll pour la navigation par ancre.
 #apropos {
   scroll-margin-top: 80px;
 }
 
-// IMPORTANT : pas de z-index sur #about, sinon son fond se peint
-// par-dessus le hero et cache la vague.
 #about,
 #projets,
 #contact {
@@ -331,10 +196,6 @@ body {
   padding-bottom: 3rem;
 }
 
-// La section "À propos" remonte sous la vague (marge négative du hero) :
-// on compense avec un padding-top = hauteur de la vague + un espace réduit.
-// Mobile : 1.5rem (espace resserré) / Desktop : 3rem.
-// !important obligatoire : Bootstrap impose py-5 en !important.
 #about {
   padding-top: calc(#{$wave-h-mobile} + 1.5rem) !important;
 
@@ -372,6 +233,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
   }
 }
 
@@ -399,7 +261,6 @@ body {
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
 
-    // Largeur plafonnée : jamais pleine largeur, centré par le conteneur flex
     width: 100%;
     max-width: 280px;
   }
@@ -409,7 +270,7 @@ body {
     border: 1px solid rgba(56, 189, 248, 0.2);
 
     span {
-      color: #cbd5e1; // lisible sur fond sombre
+      color: #cbd5e1;
     }
   }
 }
